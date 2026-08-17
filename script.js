@@ -19,17 +19,19 @@ let activeFilters = {
   subject: ""
 };
 
-menuToggle.addEventListener("click", () => {
-  const isOpen = mainNav.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
-});
-
-mainNav.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    mainNav.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = mainNav.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
   });
-});
+
+  mainNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mainNav.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
 
 function normalize(value) {
   return value
@@ -39,6 +41,10 @@ function normalize(value) {
 }
 
 function applyFilters() {
+  if (!resourceGrid || !resourceSubtitle || !searchMessage || !emptyState) {
+    return;
+  }
+
   let visibleCount = 0;
 
   resourceCards.forEach((card) => {
@@ -95,13 +101,15 @@ function runSearch() {
   document.getElementById("ressources").scrollIntoView({ behavior: "smooth" });
 }
 
-searchButton.addEventListener("click", runSearch);
+if (searchButton && globalSearch) {
+  searchButton.addEventListener("click", runSearch);
 
-globalSearch.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    runSearch();
-  }
-});
+  globalSearch.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      runSearch();
+    }
+  });
+}
 
 filterChips.forEach((chip) => {
   chip.addEventListener("click", () => {
@@ -119,7 +127,7 @@ levelFilters.forEach((button) => {
     activeFilters.level = button.dataset.level;
     activeFilters.subject = "";
     activeFilters.query = "";
-    globalSearch.value = "";
+    if (globalSearch) globalSearch.value = "";
     applyFilters();
     document.getElementById("ressources").scrollIntoView({ behavior: "smooth" });
   });
@@ -130,42 +138,54 @@ subjectFilters.forEach((button) => {
     activeFilters.subject = button.dataset.subject;
     activeFilters.level = "";
     activeFilters.query = "";
-    globalSearch.value = "";
+    if (globalSearch) globalSearch.value = "";
     applyFilters();
     document.getElementById("ressources").scrollIntoView({ behavior: "smooth" });
   });
 });
 
-resetFilters.addEventListener("click", () => {
-  activeFilters = {
-    query: "",
-    type: "Tous",
-    level: "",
-    subject: ""
-  };
+if (resetFilters) {
+  resetFilters.addEventListener("click", () => {
+    activeFilters = {
+      query: "",
+      type: "Tous",
+      level: "",
+      subject: ""
+    };
 
-  globalSearch.value = "";
-  filterChips.forEach((chip) => {
-    chip.classList.toggle("active", chip.dataset.type === "Tous");
+    if (globalSearch) {
+      if (globalSearch) globalSearch.value = "";
+    }
+
+    filterChips.forEach((chip) => {
+      chip.classList.toggle("active", chip.dataset.type === "Tous");
+    });
+
+    applyFilters();
   });
+}
 
-  applyFilters();
-});
+const currentYearElement = document.getElementById("currentYear");
+if (currentYearElement) {
+  currentYearElement.textContent = new Date().getFullYear();
+}
 
-document.getElementById("currentYear").textContent = new Date().getFullYear();
+if (resourceGrid) {
+  resourceGrid.addEventListener("click", (event) => {
+    const link = event.target.closest("a");
 
-resourceGrid.addEventListener("click", (event) => {
-  const link = event.target.closest("a");
+    if (!link) {
+      return;
+    }
 
-  if (!link) {
-    return;
-  }
-
-  if (link.getAttribute("href") === "#") {
-    event.preventDefault();
-    alert("Cette ressource est un exemple de la V1. Le PDF ou la page de cours sera ajouté à l'étape suivante.");
-  }
-});
+    if (link.getAttribute("href") === "#") {
+      event.preventDefault();
+      alert(currentLang === "ar"
+        ? "هاد المورد مجرد مثال. غادي نضيفو المحتوى الحقيقي فالمرحلة الجاية."
+        : "Cette ressource est un exemple. Le contenu réel sera ajouté à l'étape suivante.");
+    }
+  });
+}
 
 const langSwitch = document.getElementById("langSwitch");
 let currentLang = "fr";
@@ -205,6 +225,7 @@ function initializeLanguage() {
 if (langSwitch) {
   langSwitch.addEventListener("click", () => {
     applyLanguage(currentLang === "fr" ? "ar" : "fr");
+    applyFilters();
     window.dispatchEvent(new CustomEvent("ismart-language-changed", { detail: { lang: currentLang } }));
   });
 }

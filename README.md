@@ -1,9 +1,17 @@
-# iSmart Campus V4.6
+# iSmart Campus V4.6.1
+
+Base conservée : V4.6.
 
 Correction :
-- les contenus pédagogiques appartenant à la matière Français restent en français lorsque l'interface est en arabe ;
-- titre du cours en français ;
-- description du cours en français ;
-- nom de la matière affiché en français sur la carte ;
-- navigation générale du site reste en arabe ;
-- les autres matières continuent à être traduites normalement.
+- la langue sélectionnée sur la page d'accueil est mémorisée ;
+- si العربية est sélectionné, Primaire reste en arabe ;
+- Classe reste en arabe ;
+- Matière reste en arabe ;
+- Ressource reste en arabe ;
+- si FR est sélectionné, toutes les pages restent en français ;
+- aucune règle métier ou structure du site n'a été modifiée ;
+- correction du JavaScript qui s'arrêtait sur les pages secondaires car certains éléments de la page d'accueil n'y existent pas.
+
+Test :
+Accueil → العربية → Primaire → 1AP → Matière → Cours.
+Toute la navigation doit rester en arabe.
