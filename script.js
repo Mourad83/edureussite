@@ -171,7 +171,7 @@ const langSwitch = document.getElementById("langSwitch");
 let currentLang = "fr";
 
 function preserveFrenchSubjectContent() {
-  document.querySelectorAll('[data-subject="Français"] [data-keep-french="true"][data-fr]').forEach((el) => {
+  document.querySelectorAll('[data-subject="Français"] [data-fr]').forEach((el) => {
     el.dataset.ar = el.dataset.fr;
   });
 }

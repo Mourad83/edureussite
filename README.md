@@ -1,7 +1,9 @@
-# iSmart Campus V4.7
+# iSmart Campus V4.6
 
-Règle finale :
-- dans la liste générale des matières, Français devient اللغة الفرنسية en mode arabe ;
-- les titres des cours de français restent en français ;
-- le contenu pédagogique français peut rester en français ;
-- la navigation générale reste traduite selon la langue choisie.
+Correction :
+- les contenus pédagogiques appartenant à la matière Français restent en français lorsque l'interface est en arabe ;
+- titre du cours en français ;
+- description du cours en français ;
+- nom de la matière affiché en français sur la carte ;
+- navigation générale du site reste en arabe ;
+- les autres matières continuent à être traduites normalement.
