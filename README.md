@@ -1,24 +1,17 @@
-# iSmart Campus - V2
+# iSmart Campus - V2 corrigée
 
-Nom :
-iSmart Campus
-آي سمارت كامبوس
+Correction principale :
+- taille du logo fixée dans l'en-tête ;
+- suppression du bloc logo géant provoqué par l'ancien CSS en cache ;
+- navigation réorganisée ;
+- logo principal limité à une taille propre ;
+- cache CSS/JS forcé avec version dans index.html ;
+- version FR / العربية conservée.
 
-Slogan :
-Apprendre intelligemment, réussir avec confiance.
-القراية بذكاء، النجاح بثقة
-
-Cette version ajoute :
-- le nouveau nom iSmart Campus ;
-- le nom arabe آي سمارت كامبوس ;
-- le nouveau logo ;
-- le slogan ;
-- un sélecteur FR / العربية ;
-- le passage automatique en lecture RTL pour l'arabe ;
-- une base bilingue adaptée aux élèves marocains.
-
-Pour mettre à jour GitHub Pages :
-1. Remplacer index.html, style.css et script.js.
-2. Ajouter logo-ismart-campus.png.
-3. Remplacer README.md si souhaité.
-4. Cliquer sur Commit changes.
+Mise à jour GitHub :
+1. Remplacer index.html.
+2. Remplacer style.css.
+3. Remplacer script.js.
+4. Vérifier que logo-ismart-campus.png est présent.
+5. Commit changes.
+6. Ouvrir le site avec Ctrl+F5.
