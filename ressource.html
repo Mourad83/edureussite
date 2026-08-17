@@ -8,13 +8,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260817-14">
+  <link rel="stylesheet" href="style.css?v=20260817-15">
 </head>
+
 <body>
-  <header class="site-header">
+
+<header class="site-header">
   <div class="container nav-wrap">
+
     <a class="brand" href="index.html" aria-label="Accueil iSmart Campus">
       <img src="logo-ismart-campus.png" alt="Logo iSmart Campus">
+
       <div class="brand-text">
         <strong>iSmart Campus</strong>
         <span>آي سمارت كامبوس</span>
@@ -30,6 +34,7 @@
     </nav>
 
     <div class="header-actions">
+
       <button class="lang-switch" id="langSwitch" type="button" aria-label="Changer la langue">
         <span class="lang-fr active">FR</span>
         <span>|</span>
@@ -37,162 +42,634 @@
       </button>
 
       <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
+
     </div>
+
   </div>
 </header>
 
-  <main>
-    <section class="inner-hero resource-hero">
-      <div class="container">
-        <div class="breadcrumbs">
-          <a href="index.html" data-fr="Accueil" data-ar="الرئيسية">Accueil</a><span>›</span>
-          <a href="primaire.html" data-fr="Primaire" data-ar="الابتدائي">Primaire</a><span>›</span>
-          <a id="resourceClassLink" href="classe.html">Classe</a><span>›</span>
-          <a id="resourceSubjectLink" href="matiere.html">Matière</a><span>›</span>
-          <span id="resourceTypeBreadcrumb">Ressource</span>
+<main>
+
+  <section class="inner-hero resource-hero">
+
+    <div class="container">
+
+      <div class="breadcrumbs">
+
+        <a href="index.html" data-fr="Accueil" data-ar="الرئيسية">
+          Accueil
+        </a>
+
+        <span>›</span>
+
+        <a href="primaire.html" data-fr="Primaire" data-ar="الابتدائي">
+          Primaire
+        </a>
+
+        <span>›</span>
+
+        <a id="resourceClassLink" href="classe.html">
+          Classe
+        </a>
+
+        <span>›</span>
+
+        <a id="resourceSubjectLink" href="matiere.html">
+          Matière
+        </a>
+
+        <span>›</span>
+
+        <span id="resourceTypeBreadcrumb">
+          Ressource
+        </span>
+
+      </div>
+
+      <span class="eyebrow" id="resourceEyebrow">
+        iSmart Campus
+      </span>
+
+      <h1 id="resourceTitle">
+        Ressource
+      </h1>
+
+      <p id="resourceLead"></p>
+
+    </div>
+
+  </section>
+
+  <section class="section">
+
+    <div class="container resource-layout">
+
+      <article class="lesson-panel">
+
+        <div class="lesson-badge" id="lessonBadge">
+          CO
         </div>
-        <span class="eyebrow" id="resourceEyebrow">iSmart Campus</span>
-        <h1 id="resourceTitle">Ressource</h1>
-        <p id="resourceLead"></p>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="container resource-layout">
-        <article class="lesson-panel">
-          <div class="lesson-badge" id="lessonBadge">CO</div>
-          <h2 id="lessonHeading">Ressource</h2>
-          <p id="lessonText"></p>
+        <h2 id="lessonHeading">
+          Ressource
+        </h2>
 
-          <div class="lesson-block">
-            <h3 data-fr="Objectif" data-ar="الهدف">Objectif</h3>
-            <p id="objectiveText"></p>
-          </div>
+        <p id="lessonText"></p>
 
-          <div class="lesson-block">
-            <h3 id="activityTitle">Activité</h3>
-            <div id="activityContent"></div>
-          </div>
+        <div class="lesson-block">
 
-          <div class="lesson-block">
-            <h3 data-fr="Conseil iSmart" data-ar="نصيحة iSmart">Conseil iSmart</h3>
-            <p data-fr="Travaille à ton rythme. Lis la consigne deux fois, essaie seul, puis vérifie ta réponse." data-ar="خدم بالراحة الخاص بك. قرا التعليمة جوج مرات، جرب بوحدك ومن بعد راجع إجابتك.">Travaille à ton rythme. Lis la consigne deux fois, essaie seul, puis vérifie ta réponse.</p>
-          </div>
-        </article>
+          <h3 data-fr="Objectif" data-ar="الهدف">
+            Objectif
+          </h3>
 
-        <aside class="resource-sidebar">
-          <div class="sidebar-card">
-            <span class="eyebrow" data-fr="Navigation" data-ar="التنقل">Navigation</span>
-            <strong id="sidebarSubject">Matière</strong>
-            <span id="sidebarLevel">Niveau</span>
-            <a id="backSubject" class="btn btn-primary sidebar-btn" href="matiere.html" data-fr="Retour à la matière" data-ar="الرجوع للمادة">Retour à la matière</a>
-          </div>
+          <p id="objectiveText"></p>
 
-          <div class="sidebar-card">
-            <strong data-fr="Statut" data-ar="الحالة">Statut</strong>
-            <p data-fr="Cette page sert de modèle avant l'intégration des vrais contenus pédagogiques." data-ar="هذه الصفحة نموذج أولي قبل إدراج المحتوى الدراسي الفعلي.">Cette page sert de modèle avant l'intégration des vrais contenus pédagogiques.</p>
-          </div>
-        </aside>
-      </div>
-    </section>
-  </main>
+        </div>
 
-  <footer class="site-footer">
+        <div class="lesson-block">
+
+          <h3 id="activityTitle">
+            Activité
+          </h3>
+
+          <div id="activityContent"></div>
+
+        </div>
+
+        <div class="lesson-block">
+
+          <h3 data-fr="Conseil iSmart" data-ar="نصيحة iSmart">
+            Conseil iSmart
+          </h3>
+
+          <p
+            data-fr="Travaille à ton rythme. Lis attentivement le cours et reviens sur les notions importantes."
+            data-ar="تعلّم وفق وتيرتك. اقرأ الدرس بعناية وراجع المفاهيم المهمة."
+          >
+            Travaille à ton rythme. Lis attentivement le cours et reviens sur les notions importantes.
+          </p>
+
+        </div>
+
+      </article>
+
+      <aside class="resource-sidebar">
+
+        <div class="sidebar-card">
+
+          <span class="eyebrow" data-fr="Navigation" data-ar="التنقل">
+            Navigation
+          </span>
+
+          <strong id="sidebarSubject">
+            Matière
+          </strong>
+
+          <span id="sidebarLevel">
+            Niveau
+          </span>
+
+          <a
+            id="backSubject"
+            class="btn btn-primary sidebar-btn"
+            href="matiere.html"
+            data-fr="Retour à la matière"
+            data-ar="الرجوع إلى المادة"
+          >
+            Retour à la matière
+          </a>
+
+        </div>
+
+        <div class="sidebar-card">
+
+          <strong data-fr="Statut" data-ar="الحالة">
+            Statut
+          </strong>
+
+          <p
+            id="statusText"
+            data-fr="Cette page contient les ressources pédagogiques disponibles."
+            data-ar="تحتوي هذه الصفحة على الموارد التعليمية المتاحة."
+          >
+            Cette page contient les ressources pédagogiques disponibles.
+          </p>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="site-footer">
+
   <div class="container footer-wrap">
+
     <a class="footer-brand" href="index.html">
+
       <img src="logo-ismart-campus.png" alt="iSmart Campus">
+
       <div>
         <strong>iSmart Campus</strong>
         <span>آي سمارت كامبوس</span>
       </div>
+
     </a>
-    <p data-fr="© 2026 iSmart Campus — Plateforme éducative" data-ar="© 2026 آي سمارت كامبوس — منصة تعليمية">© 2026 iSmart Campus — Plateforme éducative</p>
+
+    <p
+      data-fr="© 2026 iSmart Campus — Plateforme éducative"
+      data-ar="© 2026 آي سمارت كامبوس — منصة تعليمية"
+    >
+      © 2026 iSmart Campus — Plateforme éducative
+    </p>
+
   </div>
+
 </footer>
 
-  <script src="script.js?v=20260817-14"></script>
-  <script src="primary-data.js?v=20260817-14"></script>
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const level = window.ISMART_PRIMARY_DATA[params.get("niveau")] ? params.get("niveau") : "1AP";
-    const subjects = window.ISMART_PRIMARY_DATA[level];
-    const subject = subjects.find(s => s[0] === params.get("matiere")) || subjects[0];
+<script src="script.js?v=20260817-15"></script>
+<script src="primary-data.js?v=20260817-15"></script>
 
-    const typeMap = {
-      cours: ["Cours","الدروس","CO"],
-      exercices: ["Exercices","التمارين","EX"],
-      corriges: ["Corrigés","التصحيحات","CR"],
-      evaluations: ["Évaluations","الفروض","EV"]
-    };
+<script>
 
-    const typeKey = typeMap[params.get("type")] ? params.get("type") : "cours";
+const params = new URLSearchParams(window.location.search);
 
-    function activityHtml(isAr) {
-      if (typeKey === "cours") {
-        return isAr
-          ? "<p>شرح مبسط للمفهوم مع مثال قصير لتسهيل الفهم.</p><div class='example-box'><strong>مثال:</strong> حاول شرح الفكرة بكلماتك، ثم طبّقها.</div>"
-          : "<p>Explication simple de la notion avec un petit exemple pour faciliter la compréhension.</p><div class='example-box'><strong>Exemple :</strong> reformule l'idée avec tes propres mots, puis applique-la.</div>";
-      }
+const level =
+  window.ISMART_PRIMARY_DATA[params.get("niveau")]
+    ? params.get("niveau")
+    : "1AP";
 
-      if (typeKey === "exercices") {
-        return isAr
-          ? "<ol class='exercise-list'><li>اقرأ السؤال جيدًا.</li><li>حدّد المطلوب.</li><li>اكتب مراحل الحل.</li><li>راجع إجابتك.</li></ol>"
-          : "<ol class='exercise-list'><li>Lis attentivement la question.</li><li>Identifie ce qui est demandé.</li><li>Écris les étapes de ta réponse.</li><li>Vérifie ton résultat.</li></ol>";
-      }
+const subjects =
+  window.ISMART_PRIMARY_DATA[level];
 
-      if (typeKey === "corriges") {
-        return isAr
-          ? "<ol class='exercise-list'><li>نفهم السؤال.</li><li>نختار الطريقة المناسبة.</li><li>نطبّق الحل خطوة بخطوة.</li><li>نتأكد من النتيجة.</li></ol>"
-          : "<ol class='exercise-list'><li>Comprendre la question.</li><li>Choisir la bonne méthode.</li><li>Résoudre étape par étape.</li><li>Vérifier le résultat.</li></ol>";
-      }
+const subject =
+  subjects.find(s => s[0] === params.get("matiere"))
+  || subjects[0];
 
-      return isAr
-        ? "<p>نموذج فرض يتضمن أسئلة قصيرة وتمارين تطبيقية. وسيتم لاحقًا استبداله بفروض حقيقية حسب المستوى والمادة.</p>"
-        : "<p>Modèle d'évaluation avec questions courtes et exercices d'application. Il sera ensuite remplacé par de vrais contrôles adaptés au niveau et à la matière.</p>";
-    }
+const typeMap = {
 
-    function renderResource() {
-      const isAr = document.documentElement.lang === "ar";
-      const subjectName = isAr ? subject[2] : subject[1];
-      const typeName = typeMap[typeKey][isAr ? 1 : 0];
-      const levelName = window.ISMART_LEVEL_NAMES[level][isAr ? 1 : 0];
+  cours: [
+    "Cours",
+    "الدروس",
+    "CO"
+  ],
 
-      document.title = `${typeName} - ${subjectName} - ${levelName} | iSmart Campus`;
-      document.getElementById("resourceClassLink").textContent = levelName;
-      document.getElementById("resourceClassLink").href = `classe.html?niveau=${encodeURIComponent(level)}`;
-      document.getElementById("resourceSubjectLink").textContent = subjectName;
-      document.getElementById("resourceSubjectLink").href = `matiere.html?niveau=${encodeURIComponent(level)}&matiere=${encodeURIComponent(subject[0])}`;
-      document.getElementById("resourceTypeBreadcrumb").textContent = typeName;
-      document.getElementById("resourceEyebrow").textContent = levelName;
-      document.getElementById("resourceTitle").textContent = `${typeName} · ${subjectName}`;
-      document.getElementById("resourceLead").textContent = isAr
-        ? `المستوى: ${levelName} · المادة: ${subjectName}`
-        : `Niveau : ${levelName} · Matière : ${subjectName}`;
-      document.getElementById("lessonBadge").textContent = typeMap[typeKey][2];
-      document.getElementById("lessonHeading").textContent = `${typeName} — ${subjectName}`;
-      document.getElementById("lessonText").textContent = isAr
+  exercices: [
+    "Exercices",
+    "التمارين",
+    "EX"
+  ],
+
+  corriges: [
+    "Corrigés",
+    "التصحيحات",
+    "CR"
+  ],
+
+  evaluations: [
+    "Évaluations",
+    "الفروض",
+    "EV"
+  ]
+
+};
+
+const typeKey =
+  typeMap[params.get("type")]
+    ? params.get("type")
+    : "cours";
+
+const isMathCpCourse =
+  level === "1AP"
+  && subject[0] === "M"
+  && typeKey === "cours";
+
+function mathCpCoursesHtml(isAr) {
+
+  const frenchCard = `
+    <div
+      style="
+        border:1px solid #dbe4f0;
+        border-radius:18px;
+        padding:24px;
+        margin-bottom:18px;
+        background:#ffffff;
+      "
+    >
+
+      <span
+        style="
+          display:inline-block;
+          padding:6px 12px;
+          border-radius:20px;
+          background:#eef4ff;
+          color:#315bd9;
+          font-size:13px;
+          font-weight:700;
+          margin-bottom:12px;
+        "
+      >
+        PDF · Français
+      </span>
+
+      <h3
+        style="
+          margin:0 0 8px 0;
+          font-size:20px;
+        "
+      >
+        Mathématiques CP — Cours complet
+      </h3>
+
+      <p
+        style="
+          margin:0 0 18px 0;
+          color:#667085;
+        "
+      >
+        ${isAr
+          ? "دروس الرياضيات للسنة الأولى ابتدائي باللغة الفرنسية."
+          : "Cours de mathématiques pour la 1re année primaire en français."
+        }
+      </p>
+
+      <a
+        class="btn btn-primary"
+        href="documents/cp/mathematiques/iSmart_Campus_Mathematiques_CP_FR.pdf"
+        target="_blank"
+        rel="noopener"
+      >
+        ${isAr
+          ? "فتح ملف PDF بالفرنسية"
+          : "Ouvrir le PDF français"
+        }
+      </a>
+
+    </div>
+  `;
+
+  const arabicCard = `
+    <div
+      style="
+        border:1px solid #dbe4f0;
+        border-radius:18px;
+        padding:24px;
+        margin-bottom:18px;
+        background:#ffffff;
+      "
+    >
+
+      <span
+        style="
+          display:inline-block;
+          padding:6px 12px;
+          border-radius:20px;
+          background:#fff6df;
+          color:#9a6700;
+          font-size:13px;
+          font-weight:700;
+          margin-bottom:12px;
+        "
+      >
+        PDF · العربية
+      </span>
+
+      <h3
+        style="
+          margin:0 0 8px 0;
+          font-size:20px;
+        "
+      >
+        الرياضيات — السنة الأولى ابتدائي
+      </h3>
+
+      <p
+        style="
+          margin:0 0 18px 0;
+          color:#667085;
+        "
+      >
+        ${isAr
+          ? "دروس الرياضيات للسنة الأولى ابتدائي باللغة العربية."
+          : "Cours de mathématiques pour la 1re année primaire en arabe."
+        }
+      </p>
+
+      <a
+        class="btn btn-primary"
+        href="documents/cp/mathematiques/iSmart_Campus_Mathematiques_CP_AR.pdf"
+        target="_blank"
+        rel="noopener"
+      >
+        ${isAr
+          ? "فتح ملف PDF بالعربية"
+          : "Ouvrir le PDF arabe"
+        }
+      </a>
+
+    </div>
+  `;
+
+  return isAr
+    ? arabicCard + frenchCard
+    : frenchCard + arabicCard;
+
+}
+
+function activityHtml(isAr) {
+
+  if (isMathCpCourse) {
+
+    return mathCpCoursesHtml(isAr);
+
+  }
+
+  if (typeKey === "cours") {
+
+    return isAr
+
+      ? `
+        <p>
+          شرح مبسط للمفهوم مع مثال قصير لتسهيل الفهم.
+        </p>
+
+        <div class="example-box">
+
+          <strong>
+            مثال:
+          </strong>
+
+          حاول شرح الفكرة بكلماتك، ثم طبّقها.
+
+        </div>
+      `
+
+      : `
+        <p>
+          Explication simple de la notion avec un petit exemple pour faciliter la compréhension.
+        </p>
+
+        <div class="example-box">
+
+          <strong>
+            Exemple :
+          </strong>
+
+          reformule l'idée avec tes propres mots, puis applique-la.
+
+        </div>
+      `;
+
+  }
+
+  if (typeKey === "exercices") {
+
+    return isAr
+
+      ? `
+        <ol class="exercise-list">
+          <li>اقرأ السؤال جيدًا.</li>
+          <li>حدّد المطلوب.</li>
+          <li>اكتب مراحل الحل.</li>
+          <li>راجع إجابتك.</li>
+        </ol>
+      `
+
+      : `
+        <ol class="exercise-list">
+          <li>Lis attentivement la question.</li>
+          <li>Identifie ce qui est demandé.</li>
+          <li>Écris les étapes de ta réponse.</li>
+          <li>Vérifie ton résultat.</li>
+        </ol>
+      `;
+
+  }
+
+  if (typeKey === "corriges") {
+
+    return isAr
+
+      ? `
+        <ol class="exercise-list">
+          <li>نفهم السؤال.</li>
+          <li>نختار الطريقة المناسبة.</li>
+          <li>نطبّق الحل خطوة بخطوة.</li>
+          <li>نتأكد من النتيجة.</li>
+        </ol>
+      `
+
+      : `
+        <ol class="exercise-list">
+          <li>Comprendre la question.</li>
+          <li>Choisir la bonne méthode.</li>
+          <li>Résoudre étape par étape.</li>
+          <li>Vérifier le résultat.</li>
+        </ol>
+      `;
+
+  }
+
+  return isAr
+
+    ? `
+      <p>
+        نموذج فرض يتضمن أسئلة قصيرة وتمارين تطبيقية.
+        وسيتم لاحقًا استبداله بفروض حقيقية حسب المستوى والمادة.
+      </p>
+    `
+
+    : `
+      <p>
+        Modèle d'évaluation avec questions courtes et exercices d'application.
+        Il sera ensuite remplacé par de vrais contrôles adaptés au niveau et à la matière.
+      </p>
+    `;
+
+}
+
+function renderResource() {
+
+  const isAr =
+    document.documentElement.lang === "ar";
+
+  const subjectName =
+    isAr
+      ? subject[2]
+      : subject[1];
+
+  const typeName =
+    typeMap[typeKey][isAr ? 1 : 0];
+
+  const levelName =
+    window.ISMART_LEVEL_NAMES[level][isAr ? 1 : 0];
+
+  document.title =
+    `${typeName} - ${subjectName} - ${levelName} | iSmart Campus`;
+
+  document.getElementById("resourceClassLink").textContent =
+    levelName;
+
+  document.getElementById("resourceClassLink").href =
+    `classe.html?niveau=${encodeURIComponent(level)}`;
+
+  document.getElementById("resourceSubjectLink").textContent =
+    subjectName;
+
+  document.getElementById("resourceSubjectLink").href =
+    `matiere.html?niveau=${encodeURIComponent(level)}&matiere=${encodeURIComponent(subject[0])}`;
+
+  document.getElementById("resourceTypeBreadcrumb").textContent =
+    typeName;
+
+  document.getElementById("resourceEyebrow").textContent =
+    levelName;
+
+  document.getElementById("resourceTitle").textContent =
+    `${typeName} · ${subjectName}`;
+
+  document.getElementById("resourceLead").textContent =
+    isAr
+      ? `المستوى: ${levelName} · المادة: ${subjectName}`
+      : `Niveau : ${levelName} · Matière : ${subjectName}`;
+
+  document.getElementById("lessonBadge").textContent =
+    typeMap[typeKey][2];
+
+  if (isMathCpCourse) {
+
+    document.getElementById("lessonHeading").textContent =
+      isAr
+        ? "دروس الرياضيات"
+        : "Cours de mathématiques";
+
+    document.getElementById("lessonText").textContent =
+      isAr
+        ? "اختر النسخة التي تريد فتحها: العربية أو الفرنسية."
+        : "Choisis la version du cours que tu souhaites consulter : français ou arabe.";
+
+    document.getElementById("objectiveText").textContent =
+      isAr
+        ? "الوصول إلى جميع دروس الرياضيات للسنة الأولى ابتدائي في ملف PDF واحد."
+        : "Accéder à l'ensemble des cours de mathématiques CP dans un document PDF.";
+
+    document.getElementById("activityTitle").textContent =
+      isAr
+        ? "الوثائق المتاحة"
+        : "Documents disponibles";
+
+    document.getElementById("statusText").textContent =
+      isAr
+        ? "دروس الرياضيات متاحة الآن باللغتين العربية والفرنسية."
+        : "Les cours de mathématiques CP sont disponibles en français et en arabe.";
+
+  } else {
+
+    document.getElementById("lessonHeading").textContent =
+      `${typeName} — ${subjectName}`;
+
+    document.getElementById("lessonText").textContent =
+      isAr
         ? "هذا المحتوى نموذج داخل آي سمارت كامبوس لضمان عرض الصفحة كاملة باللغة العربية."
         : "Ce contenu est un modèle iSmart Campus afin que la page reste complète et fonctionnelle en français.";
-      document.getElementById("objectiveText").textContent = isAr
+
+    document.getElementById("objectiveText").textContent =
+      isAr
         ? "الهدف هو توفير محتوى واضح وبسيط ومناسب لمستوى التلميذ."
         : "L'objectif est de proposer à l'élève un contenu clair, simple et adapté à son niveau.";
-      document.getElementById("activityTitle").textContent = typeKey === "cours"
-        ? (isAr ? "شرح مبسط" : "Explication simple")
-        : typeKey === "exercices"
-          ? (isAr ? "تمرين نموذجي" : "Exercice modèle")
-          : typeKey === "corriges"
-            ? (isAr ? "طريقة التصحيح" : "Méthode de correction")
-            : (isAr ? "نموذج فرض" : "Modèle d'évaluation");
-      document.getElementById("activityContent").innerHTML = activityHtml(isAr);
-      document.getElementById("sidebarSubject").textContent = subjectName;
-      document.getElementById("sidebarLevel").textContent = levelName;
-      document.getElementById("backSubject").href = `matiere.html?niveau=${encodeURIComponent(level)}&matiere=${encodeURIComponent(subject[0])}`;
-    }
 
-    renderResource();
-    window.addEventListener("ismart-language-changed", renderResource);
-  </script>
+    document.getElementById("activityTitle").textContent =
+      typeKey === "cours"
+        ? isAr
+          ? "شرح مبسط"
+          : "Explication simple"
+
+        : typeKey === "exercices"
+          ? isAr
+            ? "تمرين نموذجي"
+            : "Exercice modèle"
+
+          : typeKey === "corriges"
+            ? isAr
+              ? "طريقة التصحيح"
+              : "Méthode de correction"
+
+            : isAr
+              ? "نموذج فرض"
+              : "Modèle d'évaluation";
+
+  }
+
+  document.getElementById("activityContent").innerHTML =
+    activityHtml(isAr);
+
+  document.getElementById("sidebarSubject").textContent =
+    subjectName;
+
+  document.getElementById("sidebarLevel").textContent =
+    levelName;
+
+  document.getElementById("backSubject").href =
+    `matiere.html?niveau=${encodeURIComponent(level)}&matiere=${encodeURIComponent(subject[0])}`;
+
+}
+
+renderResource();
+
+window.addEventListener(
+  "ismart-language-changed",
+  renderResource
+);
+
+</script>
+
 </body>
 </html>
