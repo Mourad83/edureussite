@@ -181,7 +181,7 @@ if (resourceGrid) {
     if (link.getAttribute("href") === "#") {
       event.preventDefault();
       alert(currentLang === "ar"
-        ? "هاد المورد مجرد مثال. غادي نضيفو المحتوى الحقيقي فالمرحلة الجاية."
+        ? "هذا المورد مجرد مثال. سيتم إضافة المحتوى الفعلي في المرحلة القادمة."
         : "Cette ressource est un exemple. Le contenu réel sera ajouté à l'étape suivante.");
     }
   });

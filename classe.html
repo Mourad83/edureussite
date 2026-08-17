@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260817-13">
+  <link rel="stylesheet" href="style.css?v=20260817-14">
 </head>
 <body>
   <header class="site-header">
@@ -65,8 +65,8 @@
 
         <div class="section-heading">
           <span class="eyebrow" data-fr="Matières" data-ar="المواد">Matières</span>
-          <h2 data-fr="Choisis une matière" data-ar="اختار المادة">Choisis une matière</h2>
-          <p data-fr="Sélectionne la matière que tu veux étudier." data-ar="اختار المادة اللي بغيتي تقرا.">Sélectionne la matière que tu veux étudier.</p>
+          <h2 data-fr="Choisis une matière" data-ar="اختر المادة">Choisis une matière</h2>
+          <p data-fr="Sélectionne la matière que tu veux étudier." data-ar="اختر المادة اللي بغيتي تقرا.">Sélectionne la matière que tu veux étudier.</p>
         </div>
 
         <div class="subjects-page-grid" id="subjectsGrid"></div>
@@ -106,8 +106,8 @@
   </div>
 </footer>
 
-  <script src="script.js?v=20260817-13"></script>
-  <script src="primary-data.js?v=20260817-13"></script>
+  <script src="script.js?v=20260817-14"></script>
+  <script src="primary-data.js?v=20260817-14"></script>
   <script>
     const primarySubjects = window.ISMART_PRIMARY_DATA;
     const names = window.ISMART_LEVEL_NAMES;
@@ -121,7 +121,7 @@
       document.getElementById("breadcrumbLevel").textContent = levelName;
       document.getElementById("classTitle").textContent = levelName;
       document.getElementById("classIntro").textContent = isAr
-        ? "اختار المادة باش توصل للدروس والتمارين والتصحيحات والفروض."
+        ? "اختر المادة باش توصل للدروس والتمارين والتصحيحات والفروض."
         : "Choisis une matière pour accéder aux cours, exercices, corrigés et évaluations.";
 
       document.getElementById("subjectsGrid").innerHTML = primarySubjects[level].map(s => {

@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260817-13">
+  <link rel="stylesheet" href="style.css?v=20260817-14">
 </head>
 <body>
   <header class="site-header">
@@ -78,7 +78,7 @@
 
           <div class="lesson-block">
             <h3 data-fr="Conseil iSmart" data-ar="نصيحة iSmart">Conseil iSmart</h3>
-            <p data-fr="Travaille à ton rythme. Lis la consigne deux fois, essaie seul, puis vérifie ta réponse." data-ar="خدم بالراحة ديالك. قرا التعليمة جوج مرات، جرب بوحدك ومن بعد راجع الجواب.">Travaille à ton rythme. Lis la consigne deux fois, essaie seul, puis vérifie ta réponse.</p>
+            <p data-fr="Travaille à ton rythme. Lis la consigne deux fois, essaie seul, puis vérifie ta réponse." data-ar="خدم بالراحة الخاص بك. قرا التعليمة جوج مرات، جرب بوحدك ومن بعد راجع إجابتك.">Travaille à ton rythme. Lis la consigne deux fois, essaie seul, puis vérifie ta réponse.</p>
           </div>
         </article>
 
@@ -92,7 +92,7 @@
 
           <div class="sidebar-card">
             <strong data-fr="Statut" data-ar="الحالة">Statut</strong>
-            <p data-fr="Cette page sert de modèle avant l'intégration des vrais contenus pédagogiques." data-ar="هاد الصفحة نموذج قبل ما ندمجو المحتوى الدراسي الحقيقي.">Cette page sert de modèle avant l'intégration des vrais contenus pédagogiques.</p>
+            <p data-fr="Cette page sert de modèle avant l'intégration des vrais contenus pédagogiques." data-ar="هذه الصفحة نموذج أولي قبل إدراج المحتوى الدراسي الفعلي.">Cette page sert de modèle avant l'intégration des vrais contenus pédagogiques.</p>
           </div>
         </aside>
       </div>
@@ -112,8 +112,8 @@
   </div>
 </footer>
 
-  <script src="script.js?v=20260817-13"></script>
-  <script src="primary-data.js?v=20260817-13"></script>
+  <script src="script.js?v=20260817-14"></script>
+  <script src="primary-data.js?v=20260817-14"></script>
   <script>
     const params = new URLSearchParams(window.location.search);
     const level = window.ISMART_PRIMARY_DATA[params.get("niveau")] ? params.get("niveau") : "1AP";
@@ -132,24 +132,24 @@
     function activityHtml(isAr) {
       if (typeKey === "cours") {
         return isAr
-          ? "<p>شرح مبسط للمفهوم مع مثال صغير باش يكون الفهم سهل وواضح.</p><div class='example-box'><strong>مثال:</strong> حاول تشرح الفكرة بكلماتك ومن بعد طبقها.</div>"
+          ? "<p>شرح مبسط للمفهوم مع مثال قصير لتسهيل الفهم.</p><div class='example-box'><strong>مثال:</strong> حاول شرح الفكرة بكلماتك، ثم طبّقها.</div>"
           : "<p>Explication simple de la notion avec un petit exemple pour faciliter la compréhension.</p><div class='example-box'><strong>Exemple :</strong> reformule l'idée avec tes propres mots, puis applique-la.</div>";
       }
 
       if (typeKey === "exercices") {
         return isAr
-          ? "<ol class='exercise-list'><li>قرا السؤال مزيان.</li><li>حدد المطلوب.</li><li>كتب مراحل الحل.</li><li>راجع الجواب.</li></ol>"
+          ? "<ol class='exercise-list'><li>اقرأ السؤال جيدًا.</li><li>حدّد المطلوب.</li><li>اكتب مراحل الحل.</li><li>راجع إجابتك.</li></ol>"
           : "<ol class='exercise-list'><li>Lis attentivement la question.</li><li>Identifie ce qui est demandé.</li><li>Écris les étapes de ta réponse.</li><li>Vérifie ton résultat.</li></ol>";
       }
 
       if (typeKey === "corriges") {
         return isAr
-          ? "<ol class='exercise-list'><li>نفهمو السؤال.</li><li>نختارو الطريقة المناسبة.</li><li>نطبقو الحل خطوة بخطوة.</li><li>نتأكدو من النتيجة.</li></ol>"
+          ? "<ol class='exercise-list'><li>نفهم السؤال.</li><li>نختار الطريقة المناسبة.</li><li>نطبّق الحل خطوة بخطوة.</li><li>نتأكد من النتيجة.</li></ol>"
           : "<ol class='exercise-list'><li>Comprendre la question.</li><li>Choisir la bonne méthode.</li><li>Résoudre étape par étape.</li><li>Vérifier le résultat.</li></ol>";
       }
 
       return isAr
-        ? "<p>نموذج فرض فيه أسئلة قصيرة وتمارين تطبيقية. غادي نعوضوه من بعد بفروض حقيقية حسب المستوى والمادة.</p>"
+        ? "<p>نموذج فرض يتضمن أسئلة قصيرة وتمارين تطبيقية. وسيتم لاحقًا استبداله بفروض حقيقية حسب المستوى والمادة.</p>"
         : "<p>Modèle d'évaluation avec questions courtes et exercices d'application. Il sera ensuite remplacé par de vrais contrôles adaptés au niveau et à la matière.</p>";
     }
 
@@ -173,10 +173,10 @@
       document.getElementById("lessonBadge").textContent = typeMap[typeKey][2];
       document.getElementById("lessonHeading").textContent = `${typeName} — ${subjectName}`;
       document.getElementById("lessonText").textContent = isAr
-        ? "هاد المحتوى نموذج داخل آي سمارت كامبوس باش الصفحة تبقى كاملة وخدامة بالعربية."
+        ? "هذا المحتوى نموذج داخل آي سمارت كامبوس لضمان عرض الصفحة كاملة باللغة العربية."
         : "Ce contenu est un modèle iSmart Campus afin que la page reste complète et fonctionnelle en français.";
       document.getElementById("objectiveText").textContent = isAr
-        ? "الهدف هو نوفر للتلميذ محتوى واضح، بسيط ومناسب للمستوى ديالو."
+        ? "الهدف هو توفير محتوى واضح وبسيط ومناسب لمستوى التلميذ."
         : "L'objectif est de proposer à l'élève un contenu clair, simple et adapté à son niveau.";
       document.getElementById("activityTitle").textContent = typeKey === "cours"
         ? (isAr ? "شرح مبسط" : "Explication simple")

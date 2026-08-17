@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260817-13">
+  <link rel="stylesheet" href="style.css?v=20260817-14">
 </head>
 <body>
   <header class="site-header">
@@ -66,8 +66,8 @@
 
         <div class="section-heading">
           <span class="eyebrow" data-fr="Ressources" data-ar="الموارد">Ressources</span>
-          <h2 data-fr="Que veux-tu faire ?" data-ar="شنو بغيتي تدير؟">Que veux-tu faire ?</h2>
-          <p data-fr="Choisis le type de ressource dont tu as besoin." data-ar="اختار نوع المورد اللي محتاج.">Choisis le type de ressource dont tu as besoin.</p>
+          <h2 data-fr="Que veux-tu faire ?" data-ar="ماذا تريد أن تدرس؟">Que veux-tu faire ?</h2>
+          <p data-fr="Choisis le type de ressource dont tu as besoin." data-ar="اختر نوع المورد الذي تحتاج إليه.">Choisis le type de ressource dont tu as besoin.</p>
         </div>
 
         <div class="resource-actions-grid" id="resourceActions"></div>
@@ -96,8 +96,8 @@
   </div>
 </footer>
 
-  <script src="script.js?v=20260817-13"></script>
-  <script src="primary-data.js?v=20260817-13"></script>
+  <script src="script.js?v=20260817-14"></script>
+  <script src="primary-data.js?v=20260817-14"></script>
   <script>
     const params = new URLSearchParams(window.location.search);
     const level = window.ISMART_PRIMARY_DATA[params.get("niveau")] ? params.get("niveau") : "1AP";
@@ -123,12 +123,12 @@
       document.getElementById("levelEyebrow").textContent = levelName;
       document.getElementById("subjectTitle").textContent = subjectName;
       document.getElementById("subjectIntro").textContent = isAr
-        ? `الموارد التعليمية ديال ${subjectName} للمستوى ${levelName}.`
+        ? `الموارد التعليمية لمادة ${subjectName} للمستوى ${levelName}.`
         : `Ressources de ${subjectName} pour le niveau ${levelName}.`;
       document.getElementById("backClass").href = `classe.html?niveau=${encodeURIComponent(level)}`;
       document.getElementById("summaryTitle").textContent = `${subjectName} · ${levelName}`;
       document.getElementById("summaryText").textContent = isAr
-        ? "اختار الدروس، التمارين، التصحيحات أو الفروض حسب الحاجة ديالك."
+        ? "اختر الدروس أو التمارين أو التصحيحات أو الفروض حسب حاجتك."
         : "Choisis les cours, exercices, corrigés ou évaluations selon ton besoin.";
 
       document.getElementById("resourceActions").innerHTML = types.map(t => `

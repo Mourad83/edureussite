@@ -1,17 +1,8 @@
-# iSmart Campus V4.6.1
+# iSmart Campus V4.6.2
 
-Base conservée : V4.6.
+Base : V4.6.1.
 
-Correction :
-- la langue sélectionnée sur la page d'accueil est mémorisée ;
-- si العربية est sélectionné, Primaire reste en arabe ;
-- Classe reste en arabe ;
-- Matière reste en arabe ;
-- Ressource reste en arabe ;
-- si FR est sélectionné, toutes les pages restent en français ;
-- aucune règle métier ou structure du site n'a été modifiée ;
-- correction du JavaScript qui s'arrêtait sur les pages secondaires car certains éléments de la page d'accueil n'y existent pas.
-
-Test :
-Accueil → العربية → Primaire → 1AP → Matière → Cours.
-Toute la navigation doit rester en arabe.
+Modification unique :
+- remplacement de la darija dans l'interface et les contenus par de l'arabe classique / arabe standard moderne ;
+- le slogan en darija marocaine est conservé ;
+- aucune modification de navigation, de structure, de persistance de langue ou de logique du site.
