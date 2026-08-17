@@ -178,3 +178,13 @@ function setLanguage(lang){
 
 langSwitch?.addEventListener("click",()=>setLanguage(currentLang==="fr"?"ar":"fr"));
 setLanguage("fr");
+
+try{
+  const savedLanguage=localStorage.getItem("ismart-language");
+  if(savedLanguage==="ar" || savedLanguage==="fr"){
+    setLanguage(savedLanguage);
+  }
+  langSwitch?.addEventListener("click",()=>{
+    setTimeout(()=>localStorage.setItem("ismart-language",currentLang),0);
+  });
+}catch(e){}

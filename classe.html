@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="iSmart Campus - Matières du primaire marocain.">
+  <title>Classe | iSmart Campus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260817-3">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Accueil iSmart Campus">
+        <img src="logo-ismart-campus.png" alt="Logo iSmart Campus">
+        <div class="brand-text">
+          <strong>iSmart Campus</strong>
+          <span>آي سمارت كامبوس</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" data-fr="Accueil" data-ar="الرئيسية">Accueil</a>
+        <a href="primaire.html" data-fr="Primaire" data-ar="الابتدائي">Primaire</a>
+        <a href="index.html#matieres" data-fr="Matières" data-ar="المواد">Matières</a>
+        <a href="index.html#ressources" data-fr="Ressources" data-ar="الموارد">Ressources</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="lang-switch" id="langSwitch" type="button" aria-label="Changer la langue">
+          <span class="lang-fr active">FR</span>
+          <span>|</span>
+          <span class="lang-ar">العربية</span>
+        </button>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="inner-hero">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html" data-fr="Accueil" data-ar="الرئيسية">Accueil</a>
+          <span>›</span>
+          <a href="primaire.html" data-fr="Primaire" data-ar="الابتدائي">Primaire</a>
+          <span>›</span>
+          <span id="breadcrumbLevel">Classe</span>
+        </div>
+        <span class="eyebrow" data-fr="Programme primaire" data-ar="برنامج الابتدائي">Programme primaire</span>
+        <h1 id="classTitle">Classe</h1>
+        <p id="classIntro">Choisissez une matière pour accéder aux futurs cours, exercices, corrigés et évaluations.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="back-row">
+          <a class="back-link" href="primaire.html" data-fr="← Retour aux classes" data-ar="الرجوع للمستويات →">← Retour aux classes</a>
+        </div>
+
+        <div class="section-heading">
+          <span class="eyebrow" data-fr="Matières" data-ar="المواد">Matières</span>
+          <h2 data-fr="Choisis une matière" data-ar="اختار المادة">Choisis une matière</h2>
+        </div>
+
+        <div class="subjects-page-grid" id="subjectsGrid"></div>
+
+        <div class="content-types">
+          <div class="content-type-card"><strong data-fr="Cours" data-ar="الدروس">Cours</strong><span data-fr="Leçons et résumés" data-ar="الدروس والملخصات">Leçons et résumés</span></div>
+          <div class="content-type-card"><strong data-fr="Exercices" data-ar="التمارين">Exercices</strong><span data-fr="Entraînement par chapitre" data-ar="تمارين حسب الدرس">Entraînement par chapitre</span></div>
+          <div class="content-type-card"><strong data-fr="Corrigés" data-ar="التصحيحات">Corrigés</strong><span data-fr="Solutions détaillées" data-ar="الحلول والتصحيحات">Solutions détaillées</span></div>
+          <div class="content-type-card"><strong data-fr="Évaluations" data-ar="الفروض">Évaluations</strong><span data-fr="Contrôles et préparation" data-ar="الفروض والاستعداد">Contrôles et préparation</span></div>
+        </div>
+
+        <div class="coming-note" data-fr="La structure est maintenant fonctionnelle. Les chapitres et les vrais documents seront ajoutés progressivement dans l'étape suivante." data-ar="البنية دابا خدامة. غادي نزيدو الدروس والوثائق الحقيقية تدريجيا فالمرحلة الجاية.">
+          La structure est maintenant fonctionnelle. Les chapitres et les vrais documents seront ajoutés progressivement dans l'étape suivante.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <a class="footer-brand" href="index.html">
+        <img src="logo-ismart-campus.png" alt="iSmart Campus">
+        <div>
+          <strong>iSmart Campus</strong>
+          <span>آي سمارت كامبوس</span>
+        </div>
+      </a>
+      <p>© <span id="currentYear"></span> iSmart Campus — آي سمارت كامبوس</p>
+    </div>
+  </footer>
+
+  <script src="script.js?v=20260817-3"></script>
+  <script>
+    const primarySubjects = {
+      "1AP": [
+        ["AR","Arabe","اللغة العربية"],
+        ["FR","Français","اللغة الفرنسية"],
+        ["M","Mathématiques","الرياضيات"],
+        ["SC","Activité scientifique","النشاط العلمي"],
+        ["EI","Éducation islamique","التربية الإسلامية"],
+        ["AE","Éducation artistique","التربية الفنية"]
+      ],
+      "2AP": [
+        ["AR","Arabe","اللغة العربية"],
+        ["FR","Français","اللغة الفرنسية"],
+        ["M","Mathématiques","الرياضيات"],
+        ["SC","Activité scientifique","النشاط العلمي"],
+        ["EI","Éducation islamique","التربية الإسلامية"],
+        ["AE","Éducation artistique","التربية الفنية"]
+      ],
+      "3AP": [
+        ["AR","Arabe","اللغة العربية"],
+        ["FR","Français","اللغة الفرنسية"],
+        ["M","Mathématiques","الرياضيات"],
+        ["SC","Activité scientifique","النشاط العلمي"],
+        ["EI","Éducation islamique","التربية الإسلامية"],
+        ["AE","Éducation artistique","التربية الفنية"]
+      ],
+      "4AP": [
+        ["AR","Arabe","اللغة العربية"],
+        ["FR","Français","اللغة الفرنسية"],
+        ["M","Mathématiques","الرياضيات"],
+        ["SC","Activité scientifique","النشاط العلمي"],
+        ["SS","Études sociales","الاجتماعيات"],
+        ["EI","Éducation islamique","التربية الإسلامية"],
+        ["AE","Éducation artistique","التربية الفنية"]
+      ],
+      "5AP": [
+        ["AR","Arabe","اللغة العربية"],
+        ["FR","Français","اللغة الفرنسية"],
+        ["M","Mathématiques","الرياضيات"],
+        ["SC","Activité scientifique","النشاط العلمي"],
+        ["SS","Études sociales","الاجتماعيات"],
+        ["EI","Éducation islamique","التربية الإسلامية"],
+        ["AE","Éducation artistique","التربية الفنية"]
+      ],
+      "6AP": [
+        ["AR","Arabe","اللغة العربية"],
+        ["FR","Français","اللغة الفرنسية"],
+        ["M","Mathématiques","الرياضيات"],
+        ["SC","Activité scientifique","النشاط العلمي"],
+        ["SS","Études sociales","الاجتماعيات"],
+        ["EI","Éducation islamique","التربية الإسلامية"],
+        ["AE","Éducation artistique","التربية الفنية"]
+      ]
+    };
+
+    const names = {
+      "1AP": ["1re année primaire","السنة الأولى ابتدائي"],
+      "2AP": ["2e année primaire","السنة الثانية ابتدائي"],
+      "3AP": ["3e année primaire","السنة الثالثة ابتدائي"],
+      "4AP": ["4e année primaire","السنة الرابعة ابتدائي"],
+      "5AP": ["5e année primaire","السنة الخامسة ابتدائي"],
+      "6AP": ["6e année primaire","السنة السادسة ابتدائي"]
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const level = primarySubjects[params.get("niveau")] ? params.get("niveau") : "1AP";
+    document.title = level + " | iSmart Campus";
+    document.getElementById("breadcrumbLevel").textContent = level;
+
+    function renderClassPage(){
+      const isAr = document.documentElement.lang === "ar";
+      document.getElementById("classTitle").textContent = names[level][isAr ? 1 : 0];
+      document.getElementById("classIntro").textContent = isAr
+        ? "اختار المادة باش توصل للدروس والتمارين والتصحيحات والفروض."
+        : "Choisissez une matière pour accéder aux cours, exercices, corrigés et évaluations.";
+      document.getElementById("subjectsGrid").innerHTML = primarySubjects[level].map(s => `
+        <a class="subject-page-card" href="#" onclick="event.preventDefault(); alert('${isAr ? "غادي نضيفو محتوى هاد المادة فالمرحلة الجاية." : "Le contenu de cette matière sera ajouté à l’étape suivante."}')">
+          <span class="subject-page-icon">${s[0]}</span>
+          <span>
+            <strong>${isAr ? s[2] : s[1]}</strong>
+            <small>${level}</small>
+          </span>
+        </a>
+      `).join("");
+    }
+
+    renderClassPage();
+    document.getElementById("langSwitch").addEventListener("click",()=>setTimeout(renderClassPage,0));
+  </script>
+</body>
+</html>

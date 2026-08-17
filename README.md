@@ -1,17 +1,23 @@
-# iSmart Campus - V2 corrigée
+# iSmart Campus - V3 Primaire
 
-Correction principale :
-- taille du logo fixée dans l'en-tête ;
-- suppression du bloc logo géant provoqué par l'ancien CSS en cache ;
-- navigation réorganisée ;
-- logo principal limité à une taille propre ;
-- cache CSS/JS forcé avec version dans index.html ;
-- version FR / العربية conservée.
+Cette version rend le parcours Primaire fonctionnel.
 
-Mise à jour GitHub :
-1. Remplacer index.html.
-2. Remplacer style.css.
-3. Remplacer script.js.
-4. Vérifier que logo-ismart-campus.png est présent.
-5. Commit changes.
-6. Ouvrir le site avec Ctrl+F5.
+Nouveautés :
+- clic sur Primaire depuis l'accueil ;
+- page Primaire avec 1AP, 2AP, 3AP, 4AP, 5AP et 6AP ;
+- chaque niveau ouvre sa page de matières ;
+- matières adaptées au primaire marocain ;
+- navigation Français / العربية conservée ;
+- mise en page RTL en arabe ;
+- site responsive.
+
+Fichiers à mettre sur GitHub :
+- index.html
+- style.css
+- script.js
+- primaire.html
+- classe.html
+- logo-ismart-campus.png
+- README.md
+
+Après le commit, attendre le déploiement GitHub Pages puis faire Ctrl+F5.
