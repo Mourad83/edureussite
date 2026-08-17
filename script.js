@@ -158,3 +158,23 @@ resourceGrid.addEventListener("click", (event) => {
     alert("Cette ressource est un exemple de la V1. Le PDF ou la page de cours sera ajouté à l'étape suivante.");
   }
 });
+
+const langSwitch=document.getElementById("langSwitch");
+let currentLang="fr";
+
+function setLanguage(lang){
+  currentLang=lang;
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+  document.querySelectorAll("[data-fr][data-ar]").forEach(el=>{
+    el.textContent=el.dataset[lang];
+  });
+  document.querySelectorAll("[data-placeholder-fr][data-placeholder-ar]").forEach(el=>{
+    el.placeholder=lang==="ar"?el.dataset.placeholderAr:el.dataset.placeholderFr;
+  });
+  document.querySelector(".lang-fr")?.classList.toggle("active",lang==="fr");
+  document.querySelector(".lang-ar")?.classList.toggle("active",lang==="ar");
+}
+
+langSwitch?.addEventListener("click",()=>setLanguage(currentLang==="fr"?"ar":"fr"));
+setLanguage("fr");

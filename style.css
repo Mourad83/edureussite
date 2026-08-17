@@ -834,3 +834,17 @@ button {
     padding: 34px 28px;
   }
 }
+
+.brand{display:flex;align-items:center;gap:10px;font-weight:800}
+.brand img{width:58px;height:58px;object-fit:contain;border-radius:12px}
+.brand-text{display:flex;flex-direction:column;line-height:1.15}
+.brand-text span{font-family:"Cairo",sans-serif;font-size:.78rem;color:var(--muted)}
+.lang-switch{margin-left:auto;display:flex;align-items:center;gap:7px;padding:8px 12px;border:1px solid var(--border);border-radius:999px;background:white;font-weight:800;cursor:pointer;color:var(--muted)}
+.lang-switch .active{color:var(--primary)}
+html[dir="rtl"] body{font-family:"Cairo","Inter",Arial,sans-serif}
+html[dir="rtl"] .main-nav{direction:rtl}
+html[dir="rtl"] .subject-card{text-align:right}
+html[dir="rtl"] .hero h1,html[dir="rtl"] .section-heading h2{letter-spacing:0}
+.brand-visual{width:min(100%,430px);padding:12px;border-radius:28px;background:#08111e;box-shadow:var(--shadow)}
+.brand-visual img{display:block;width:100%;border-radius:20px}
+@media(max-width:720px){.brand-text{display:none}.lang-switch{margin-left:0}.brand img{width:48px;height:48px}}

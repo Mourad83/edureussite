@@ -1,22 +1,31 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Plateforme éducative gratuite : cours, exercices, corrigés et examens du primaire au baccalauréat.">
-  <title>EduRéussite - Apprendre, s'entraîner, réussir</title>
+  <title>iSmart Campus | آي سمارت كامبوس</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="logo" href="#accueil" aria-label="Accueil EduRéussite">
-        <span class="logo-mark">E</span>
-        <span>EduRéussite</span>
+      <a class="brand" href="#accueil" aria-label="Accueil iSmart Campus">
+        <img src="logo-ismart-campus.png" alt="Logo iSmart Campus">
+        <div class="brand-text">
+          <strong>iSmart Campus</strong>
+          <span>آي سمارت كامبوس</span>
+        </div>
       </a>
+
+      <button class="lang-switch" id="langSwitch" type="button" aria-label="Changer la langue">
+        <span class="lang-fr active">FR</span>
+        <span>|</span>
+        <span class="lang-ar">العربية</span>
+      </button>
 
       <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span>
@@ -25,11 +34,11 @@
       </button>
 
       <nav class="main-nav" id="mainNav">
-        <a href="#accueil">Accueil</a>
-        <a href="#niveaux">Niveaux</a>
-        <a href="#matieres">Matières</a>
-        <a href="#ressources">Ressources</a>
-        <a href="#apropos">À propos</a>
+        <a href="#accueil" data-fr="Accueil" data-ar="الرئيسية">Accueil</a>
+        <a href="#niveaux" data-fr="Niveaux" data-ar="المستويات">Niveaux</a>
+        <a href="#matieres" data-fr="Matières" data-ar="المواد">Matières</a>
+        <a href="#ressources" data-fr="Ressources" data-ar="الموارد">Ressources</a>
+        <a href="#apropos" data-fr="À propos" data-ar="من نحن">À propos</a>
       </nav>
     </div>
   </header>
@@ -38,29 +47,31 @@
     <section class="hero" id="accueil">
       <div class="container hero-grid">
         <div class="hero-content">
-          <span class="eyebrow">Plateforme éducative gratuite</span>
-          <h1>Tout pour apprendre, s'entraîner et réussir.</h1>
-          <p>
-            Retrouvez des cours, exercices, corrigés et examens pour tous les niveaux,
-            du primaire au baccalauréat.
+          <span class="eyebrow" data-fr="Plateforme éducative pour les élèves marocains" data-ar="منصة تعليمية للتلاميذ المغاربة">Plateforme éducative pour les élèves marocains</span>
+          <h1 data-fr="Apprendre intelligemment, réussir avec confiance." data-ar="القراية بذكاء، النجاح بثقة">Apprendre intelligemment, réussir avec confiance.</h1>
+          <p data-fr="Cours, exercices, corrigés et examens du primaire au baccalauréat, en français et en arabe." data-ar="دروس، تمارين، تصحيحات وامتحانات من الابتدائي حتى البكالوريا، بالفرنسية والعربية.">
+            Cours, exercices, corrigés et examens du primaire au baccalauréat, en français et en arabe.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#niveaux">Explorer les niveaux</a>
-            <a class="btn btn-secondary" href="#ressources">Voir les ressources</a>
+            <a class="btn btn-primary" href="#niveaux" data-fr="Explorer les niveaux" data-ar="استكشف المستويات">Explorer les niveaux</a>
+            <a class="btn btn-secondary" href="#ressources" data-fr="Voir les ressources" data-ar="شوف الموارد">Voir les ressources</a>
           </div>
 
           <div class="search-box">
-            <label for="globalSearch">Que voulez-vous apprendre ?</label>
+            <label for="globalSearch" data-fr="Que voulez-vous apprendre ?" data-ar="شنو بغيتي تقرا؟">Que voulez-vous apprendre ?</label>
             <div class="search-row">
-              <input id="globalSearch" type="search" placeholder="Ex. fractions, grammaire, physique...">
-              <button id="searchButton" type="button">Rechercher</button>
+              <input id="globalSearch" type="search" placeholder="Ex. fractions, grammaire, physique..." data-placeholder-fr="Ex. fractions, grammaire, physique..." data-placeholder-ar="مثال: الكسور، القواعد، الفيزياء...">
+              <button id="searchButton" type="button" data-fr="Rechercher" data-ar="بحث">Rechercher</button>
             </div>
             <p class="search-message" id="searchMessage" aria-live="polite"></p>
           </div>
         </div>
 
         <div class="hero-panel">
+          <div class="brand-visual">
+            <img src="logo-ismart-campus.png" alt="iSmart Campus">
+          </div>
           <div class="hero-card hero-card-main">
             <span class="card-kicker">Votre parcours</span>
             <h2>Choisissez votre niveau</h2>
@@ -87,8 +98,8 @@
     <section class="section" id="niveaux">
       <div class="container">
         <div class="section-heading">
-          <span class="eyebrow">Par niveau</span>
-          <h2>Choisissez votre parcours</h2>
+          <span class="eyebrow" data-fr="Par niveau" data-ar="حسب المستوى">Par niveau</span>
+          <h2 data-fr="Choisissez votre niveau scolaire" data-ar="اختار المستوى الدراسي ديالك">Choisissez votre niveau scolaire</h2>
           <p>Chaque niveau regroupe les matières, les cours et les exercices correspondants.</p>
         </div>
 
@@ -131,8 +142,8 @@
     <section class="section section-soft" id="matieres">
       <div class="container">
         <div class="section-heading">
-          <span class="eyebrow">Par matière</span>
-          <h2>Les matières principales</h2>
+          <span class="eyebrow" data-fr="Par matière" data-ar="حسب المادة">Par matière</span>
+          <h2 data-fr="Les matières principales" data-ar="المواد الرئيسية">Les matières principales</h2>
           <p>Une navigation simple pour trouver rapidement le contenu dont vous avez besoin.</p>
         </div>
 
@@ -192,8 +203,8 @@
       <div class="container">
         <div class="section-heading resource-heading">
           <div>
-            <span class="eyebrow">Bibliothèque</span>
-            <h2>Dernières ressources</h2>
+            <span class="eyebrow" data-fr="Bibliothèque" data-ar="المكتبة">Bibliothèque</span>
+            <h2 data-fr="Dernières ressources" data-ar="آخر الموارد">Dernières ressources</h2>
             <p id="resourceSubtitle">Cours, exercices, corrigés et examens disponibles dans la plateforme.</p>
           </div>
           <button class="btn btn-small btn-secondary" id="resetFilters">Tout afficher</button>
@@ -298,11 +309,11 @@
       <div class="container">
         <div class="about-card">
           <div>
-            <span class="eyebrow">Notre objectif</span>
-            <h2>Rendre les ressources scolaires simples et accessibles.</h2>
+            <span class="eyebrow" data-fr="Notre objectif" data-ar="الهدف ديالنا">Notre objectif</span>
+            <h2 data-fr="Rendre les ressources scolaires simples et accessibles." data-ar="نخليو الموارد الدراسية بسيطة ومتاحة للجميع.">Rendre les ressources scolaires simples et accessibles.</h2>
           </div>
           <p>
-            EduRéussite centralise les supports pédagogiques pour aider les élèves à apprendre
+            iSmart Campus centralise les supports pédagogiques pour aider les élèves marocains à apprendre
             à leur rythme et permettre aux familles de retrouver facilement des ressources fiables.
           </p>
         </div>
@@ -313,10 +324,10 @@
       <div class="container">
         <div class="cta-card">
           <div>
-            <span class="eyebrow eyebrow-light">Commencer maintenant</span>
-            <h2>Choisissez votre niveau et commencez à apprendre.</h2>
+            <span class="eyebrow eyebrow-light" data-fr="iSmart Campus" data-ar="آي سمارت كامبوس">iSmart Campus</span>
+            <h2 data-fr="Apprendre intelligemment, réussir avec confiance." data-ar="القراية بذكاء، النجاح بثقة">Apprendre intelligemment, réussir avec confiance.</h2>
           </div>
-          <a class="btn btn-white" href="#niveaux">Voir les niveaux</a>
+          <a class="btn btn-white" href="#niveaux" data-fr="Commencer" data-ar="بدا دابا">Commencer</a>
         </div>
       </div>
     </section>
@@ -328,7 +339,7 @@
         <span class="logo-mark">E</span>
         <span>EduRéussite</span>
       </a>
-      <p>© <span id="currentYear"></span> EduRéussite. Plateforme éducative.</p>
+      <p>© <span id="currentYear"></span> iSmart Campus — آي سمارت كامبوس</p>
     </div>
   </footer>
 

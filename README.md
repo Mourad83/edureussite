@@ -1,22 +1,24 @@
-# EduRéussite - V1
+# iSmart Campus - V2
 
-Cette version contient :
-- page d'accueil responsive ;
-- navigation par niveaux ;
-- navigation par matières ;
-- recherche de ressources ;
-- filtres Cours / Exercices / Corrigés / Examens ;
-- exemples de ressources ;
-- design responsive mobile, tablette et ordinateur.
+Nom :
+iSmart Campus
+آي سمارت كامبوس
 
-## Utilisation
+Slogan :
+Apprendre intelligemment, réussir avec confiance.
+القراية بذكاء، النجاح بثقة
 
-1. Décompresser le dossier.
-2. Ouvrir `index.html` dans un navigateur.
-3. Pour publier gratuitement, déposer `index.html`, `style.css` et `script.js` dans un dépôt GitHub et activer GitHub Pages.
+Cette version ajoute :
+- le nouveau nom iSmart Campus ;
+- le nom arabe آي سمارت كامبوس ;
+- le nouveau logo ;
+- le slogan ;
+- un sélecteur FR / العربية ;
+- le passage automatique en lecture RTL pour l'arabe ;
+- une base bilingue adaptée aux élèves marocains.
 
-## Structure
-
-- `index.html` : contenu du site
-- `style.css` : design
-- `script.js` : recherche, filtres et menu mobile
+Pour mettre à jour GitHub Pages :
+1. Remplacer index.html, style.css et script.js.
+2. Ajouter logo-ismart-campus.png.
+3. Remplacer README.md si souhaité.
+4. Cliquer sur Commit changes.
