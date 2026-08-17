@@ -8,53 +8,52 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260817-6">
+  <link rel="stylesheet" href="style.css?v=20260817-8">
 </head>
 <body>
   <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="Accueil iSmart Campus">
-        <img src="logo-ismart-campus.png" alt="Logo iSmart Campus">
-        <div class="brand-text">
-          <strong>iSmart Campus</strong>
-          <span>آي سمارت كامبوس</span>
-        </div>
-      </a>
-
-      <nav class="main-nav" id="mainNav">
-        <a href="index.html" data-fr="Accueil" data-ar="الرئيسية">Accueil</a>
-        <a href="primaire.html" data-fr="Primaire" data-ar="الابتدائي">Primaire</a>
-        <a href="index.html#matieres" data-fr="Matières" data-ar="المواد">Matières</a>
-        <a href="index.html#ressources" data-fr="Ressources" data-ar="الموارد">Ressources</a>
-      </nav>
-
-      <div class="header-actions">
-        <button class="lang-switch" id="langSwitch" type="button" aria-label="Changer la langue">
-          <span class="lang-fr active">FR</span>
-          <span>|</span>
-          <span class="lang-ar">العربية</span>
-        </button>
-
-        <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="Accueil iSmart Campus">
+      <img src="logo-ismart-campus.png" alt="Logo iSmart Campus">
+      <div class="brand-text">
+        <strong>iSmart Campus</strong>
+        <span>آي سمارت كامبوس</span>
       </div>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" data-fr="Accueil" data-ar="الرئيسية">Accueil</a>
+      <a href="primaire.html" data-fr="Primaire" data-ar="الابتدائي">Primaire</a>
+      <a href="index.html#matieres" data-fr="Matières" data-ar="المواد">Matières</a>
+      <a href="index.html#ressources" data-fr="Ressources" data-ar="الموارد">Ressources</a>
+      <a href="index.html#apropos" data-fr="À propos" data-ar="من نحن">À propos</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="lang-switch" id="langSwitch" type="button" aria-label="Changer la langue">
+        <span class="lang-fr active">FR</span>
+        <span>|</span>
+        <span class="lang-ar">العربية</span>
+      </button>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </header>
+  </div>
+</header>
 
   <main>
     <section class="inner-hero">
       <div class="container">
         <div class="breadcrumbs">
-          <a href="index.html" data-fr="Accueil" data-ar="الرئيسية">Accueil</a>
-          <span>›</span>
-          <a href="primaire.html" data-fr="Primaire" data-ar="الابتدائي">Primaire</a>
-          <span>›</span>
+          <a href="index.html" data-fr="Accueil" data-ar="الرئيسية">Accueil</a><span>›</span>
+          <a href="primaire.html" data-fr="Primaire" data-ar="الابتدائي">Primaire</a><span>›</span>
           <span id="breadcrumbLevel">Classe</span>
         </div>
         <span class="eyebrow" data-fr="Programme primaire" data-ar="برنامج الابتدائي">Programme primaire</span>
         <h1 id="classTitle">Classe</h1>
-        <p id="classIntro">Choisissez une matière pour accéder aux futurs cours, exercices, corrigés et évaluations.</p>
+        <p id="classIntro"></p>
       </div>
     </section>
 
@@ -67,69 +66,74 @@
         <div class="section-heading">
           <span class="eyebrow" data-fr="Matières" data-ar="المواد">Matières</span>
           <h2 data-fr="Choisis une matière" data-ar="اختار المادة">Choisis une matière</h2>
+          <p data-fr="Sélectionne la matière que tu veux étudier." data-ar="اختار المادة اللي بغيتي تقرا.">Sélectionne la matière que tu veux étudier.</p>
         </div>
 
         <div class="subjects-page-grid" id="subjectsGrid"></div>
 
         <div class="content-types">
-          <div class="content-type-card"><strong data-fr="Cours" data-ar="الدروس">Cours</strong><span data-fr="Leçons et résumés" data-ar="الدروس والملخصات">Leçons et résumés</span></div>
-          <div class="content-type-card"><strong data-fr="Exercices" data-ar="التمارين">Exercices</strong><span data-fr="Entraînement par chapitre" data-ar="تمارين حسب الدرس">Entraînement par chapitre</span></div>
-          <div class="content-type-card"><strong data-fr="Corrigés" data-ar="التصحيحات">Corrigés</strong><span data-fr="Solutions détaillées" data-ar="الحلول والتصحيحات">Solutions détaillées</span></div>
-          <div class="content-type-card"><strong data-fr="Évaluations" data-ar="الفروض">Évaluations</strong><span data-fr="Contrôles et préparation" data-ar="الفروض والاستعداد">Contrôles et préparation</span></div>
-        </div>
-
-        <div class="coming-note" data-fr="Chaque matière ouvre maintenant une vraie page avec cours, exercices, corrigés et évaluations." data-ar="كل مادة كتفتح دابا صفحة حقيقية فيها الدروس والتمارين والتصحيحات والفروض.">
-          Chaque matière ouvre maintenant une vraie page avec cours, exercices, corrigés et évaluations.
+          <div class="content-type-card">
+            <strong data-fr="Cours" data-ar="الدروس">Cours</strong>
+            <span data-fr="Leçons et résumés" data-ar="الدروس والملخصات">Leçons et résumés</span>
+          </div>
+          <div class="content-type-card">
+            <strong data-fr="Exercices" data-ar="التمارين">Exercices</strong>
+            <span data-fr="Entraînement par chapitre" data-ar="تمارين حسب الدرس">Entraînement par chapitre</span>
+          </div>
+          <div class="content-type-card">
+            <strong data-fr="Corrigés" data-ar="التصحيحات">Corrigés</strong>
+            <span data-fr="Solutions détaillées" data-ar="الحلول والتصحيحات">Solutions détaillées</span>
+          </div>
+          <div class="content-type-card">
+            <strong data-fr="Évaluations" data-ar="الفروض">Évaluations</strong>
+            <span data-fr="Contrôles et préparation" data-ar="الفروض والاستعداد">Contrôles et préparation</span>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-wrap">
-      <a class="footer-brand" href="index.html">
-        <img src="logo-ismart-campus.png" alt="iSmart Campus">
-        <div>
-          <strong>iSmart Campus</strong>
-          <span>آي سمارت كامبوس</span>
-        </div>
-      </a>
-      <p>© <span id="currentYear"></span> iSmart Campus — آي سمارت كامبوس</p>
-    </div>
-  </footer>
+  <div class="container footer-wrap">
+    <a class="footer-brand" href="index.html">
+      <img src="logo-ismart-campus.png" alt="iSmart Campus">
+      <div>
+        <strong>iSmart Campus</strong>
+        <span>آي سمارت كامبوس</span>
+      </div>
+    </a>
+    <p data-fr="© 2026 iSmart Campus — Plateforme éducative" data-ar="© 2026 آي سمارت كامبوس — منصة تعليمية">© 2026 iSmart Campus — Plateforme éducative</p>
+  </div>
+</footer>
 
-  <script src="script.js?v=20260817-6"></script>
-  <script src="primary-data.js?v=20260817-6"></script>
+  <script src="script.js?v=20260817-8"></script>
+  <script src="primary-data.js?v=20260817-8"></script>
   <script>
     const primarySubjects = window.ISMART_PRIMARY_DATA;
     const names = window.ISMART_LEVEL_NAMES;
     const params = new URLSearchParams(window.location.search);
     const level = primarySubjects[params.get("niveau")] ? params.get("niveau") : "1AP";
-    document.title = level + " | iSmart Campus";
-    document.getElementById("breadcrumbLevel").textContent = level;
 
-    function renderClassPage(){
+    function renderClassPage() {
       const isAr = document.documentElement.lang === "ar";
       const levelName = names[level][isAr ? 1 : 0];
-
+      document.title = levelName + " | iSmart Campus";
       document.getElementById("breadcrumbLevel").textContent = levelName;
       document.getElementById("classTitle").textContent = levelName;
       document.getElementById("classIntro").textContent = isAr
         ? "اختار المادة باش توصل للدروس والتمارين والتصحيحات والفروض."
-        : "Choisissez une matière pour accéder aux cours, exercices, corrigés et évaluations.";
+        : "Choisis une matière pour accéder aux cours, exercices, corrigés et évaluations.";
 
       document.getElementById("subjectsGrid").innerHTML = primarySubjects[level].map(s => {
         const label = isAr ? s[2] : s[1];
-        const url = `matiere.html?niveau=${encodeURIComponent(level)}&matiere=${encodeURIComponent(s[0])}`;
         return `
-          <a class="subject-page-card" href="${url}">
+          <a class="subject-page-card" href="matiere.html?niveau=${encodeURIComponent(level)}&matiere=${encodeURIComponent(s[0])}">
             <span class="subject-page-icon">${s[0]}</span>
             <span>
               <strong>${label}</strong>
-              <small>${level}</small>
+              <small>${levelName}</small>
             </span>
-          </a>
-        `;
+          </a>`;
       }).join("");
     }
 

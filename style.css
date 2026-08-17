@@ -1388,3 +1388,24 @@ html[dir="rtl"] .main-nav{margin-left:0!important;margin-right:auto!important}
 html[dir="rtl"] .resource-arrow{margin-left:0!important;margin-right:auto!important}
 html[dir="rtl"] input{text-align:right}
 html[dir="ltr"] body{direction:ltr;text-align:left}
+
+html[dir="rtl"] .level-card,
+html[dir="rtl"] .resource-card,
+html[dir="rtl"] .subject-card,
+html[dir="rtl"] .about-card{
+  text-align:right;
+}
+
+html[dir="rtl"] .level-icon{
+  margin-left:auto;
+  margin-right:0;
+}
+
+html[dir="rtl"] .resource-meta,
+html[dir="rtl"] .resource-top{
+  flex-direction:row;
+}
+
+html[dir="rtl"] .filter-row{
+  justify-content:flex-start;
+}

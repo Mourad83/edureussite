@@ -8,34 +8,40 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260817-6">
+  <link rel="stylesheet" href="style.css?v=20260817-8">
 </head>
 <body>
   <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="Accueil iSmart Campus">
-        <img src="logo-ismart-campus.png" alt="Logo iSmart Campus">
-        <div class="brand-text">
-          <strong>iSmart Campus</strong>
-          <span>آي سمارت كامبوس</span>
-        </div>
-      </a>
-      <nav class="main-nav" id="mainNav">
-        <a href="index.html" data-fr="Accueil" data-ar="الرئيسية">Accueil</a>
-        <a href="primaire.html" data-fr="Primaire" data-ar="الابتدائي">Primaire</a>
-        <a href="index.html#matieres" data-fr="Matières" data-ar="المواد">Matières</a>
-        <a href="index.html#ressources" data-fr="Ressources" data-ar="الموارد">Ressources</a>
-      </nav>
-      <div class="header-actions">
-        <button class="lang-switch" id="langSwitch" type="button" aria-label="Changer la langue">
-          <span class="lang-fr active">FR</span><span>|</span><span class="lang-ar">العربية</span>
-        </button>
-        <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="Accueil iSmart Campus">
+      <img src="logo-ismart-campus.png" alt="Logo iSmart Campus">
+      <div class="brand-text">
+        <strong>iSmart Campus</strong>
+        <span>آي سمارت كامبوس</span>
       </div>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" data-fr="Accueil" data-ar="الرئيسية">Accueil</a>
+      <a href="primaire.html" data-fr="Primaire" data-ar="الابتدائي">Primaire</a>
+      <a href="index.html#matieres" data-fr="Matières" data-ar="المواد">Matières</a>
+      <a href="index.html#ressources" data-fr="Ressources" data-ar="الموارد">Ressources</a>
+      <a href="index.html#apropos" data-fr="À propos" data-ar="من نحن">À propos</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="lang-switch" id="langSwitch" type="button" aria-label="Changer la langue">
+        <span class="lang-fr active">FR</span>
+        <span>|</span>
+        <span class="lang-ar">العربية</span>
+      </button>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </header>
+  </div>
+</header>
 
   <main>
     <section class="inner-hero">
@@ -61,7 +67,7 @@
         <div class="section-heading">
           <span class="eyebrow" data-fr="Ressources" data-ar="الموارد">Ressources</span>
           <h2 data-fr="Que veux-tu faire ?" data-ar="شنو بغيتي تدير؟">Que veux-tu faire ?</h2>
-          <p data-fr="Choisis un type de ressource." data-ar="اختار نوع المورد.">Choisis un type de ressource.</p>
+          <p data-fr="Choisis le type de ressource dont tu as besoin." data-ar="اختار نوع المورد اللي محتاج.">Choisis le type de ressource dont tu as besoin.</p>
         </div>
 
         <div class="resource-actions-grid" id="resourceActions"></div>
@@ -78,22 +84,26 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-wrap">
-      <a class="footer-brand" href="index.html">
-        <img src="logo-ismart-campus.png" alt="iSmart Campus">
-        <div><strong>iSmart Campus</strong><span>آي سمارت كامبوس</span></div>
-      </a>
-      <p>© <span id="currentYear"></span> iSmart Campus — آي سمارت كامبوس</p>
-    </div>
-  </footer>
+  <div class="container footer-wrap">
+    <a class="footer-brand" href="index.html">
+      <img src="logo-ismart-campus.png" alt="iSmart Campus">
+      <div>
+        <strong>iSmart Campus</strong>
+        <span>آي سمارت كامبوس</span>
+      </div>
+    </a>
+    <p data-fr="© 2026 iSmart Campus — Plateforme éducative" data-ar="© 2026 آي سمارت كامبوس — منصة تعليمية">© 2026 iSmart Campus — Plateforme éducative</p>
+  </div>
+</footer>
 
-  <script src="script.js?v=20260817-6"></script>
-  <script src="primary-data.js?v=20260817-6"></script>
+  <script src="script.js?v=20260817-8"></script>
+  <script src="primary-data.js?v=20260817-8"></script>
   <script>
     const params = new URLSearchParams(window.location.search);
     const level = window.ISMART_PRIMARY_DATA[params.get("niveau")] ? params.get("niveau") : "1AP";
     const subjects = window.ISMART_PRIMARY_DATA[level];
     const subject = subjects.find(s => s[0] === params.get("matiere")) || subjects[0];
+
     const types = [
       ["cours","Cours","الدروس","Leçons, notions et résumés","الدروس والمفاهيم والملخصات","CO"],
       ["exercices","Exercices","التمارين","Entraînement progressif","تمارين تدريجية","EX"],
@@ -101,12 +111,12 @@
       ["evaluations","Évaluations","الفروض","Contrôles et préparation","الفروض والاستعداد","EV"]
     ];
 
-    function renderSubjectPage(){
+    function renderSubjectPage() {
       const isAr = document.documentElement.lang === "ar";
       const subjectName = isAr ? subject[2] : subject[1];
       const levelName = window.ISMART_LEVEL_NAMES[level][isAr ? 1 : 0];
 
-      document.title = subjectName + " - " + level + " | iSmart Campus";
+      document.title = subjectName + " - " + levelName + " | iSmart Campus";
       document.getElementById("classBreadcrumb").textContent = levelName;
       document.getElementById("classBreadcrumb").href = `classe.html?niveau=${encodeURIComponent(level)}`;
       document.getElementById("subjectBreadcrumb").textContent = subjectName;
@@ -118,8 +128,8 @@
       document.getElementById("backClass").href = `classe.html?niveau=${encodeURIComponent(level)}`;
       document.getElementById("summaryTitle").textContent = `${subjectName} · ${levelName}`;
       document.getElementById("summaryText").textContent = isAr
-        ? "تقدر تدخل مباشرة للدروس، التمارين، التصحيحات والفروض. جميع الروابط خدامين."
-        : "Tu peux accéder directement aux cours, exercices, corrigés et évaluations. Tous les liens de cette page sont fonctionnels.";
+        ? "اختار الدروس، التمارين، التصحيحات أو الفروض حسب الحاجة ديالك."
+        : "Choisis les cours, exercices, corrigés ou évaluations selon ton besoin.";
 
       document.getElementById("resourceActions").innerHTML = types.map(t => `
         <a class="resource-action-card" href="ressource.html?niveau=${encodeURIComponent(level)}&matiere=${encodeURIComponent(subject[0])}&type=${encodeURIComponent(t[0])}">

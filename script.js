@@ -72,12 +72,20 @@ function applyFilters() {
   if (activeFilters.subject) context.push(activeFilters.subject);
   if (activeFilters.type !== "Tous") context.push(activeFilters.type);
 
+  const isAr = typeof currentLang !== "undefined" && currentLang === "ar";
+
   resourceSubtitle.textContent = context.length
-    ? `${visibleCount} ressource(s) pour : ${context.join(" · ")}`
-    : "Cours, exercices, corrigés et examens disponibles dans la plateforme.";
+    ? (isAr
+        ? `${visibleCount} مورد: ${context.join(" · ")}`
+        : `${visibleCount} ressource(s) pour : ${context.join(" · ")}`)
+    : (isAr
+        ? "دروس، تمارين، تصحيحات وامتحانات متوفرة فالمنصة."
+        : "Cours, exercices, corrigés et examens disponibles dans la plateforme.");
 
   searchMessage.textContent = activeFilters.query
-    ? `${visibleCount} résultat(s) pour « ${activeFilters.query} »`
+    ? (isAr
+        ? `${visibleCount} نتيجة على « ${activeFilters.query} »`
+        : `${visibleCount} résultat(s) pour « ${activeFilters.query} »`)
     : "";
 }
 
