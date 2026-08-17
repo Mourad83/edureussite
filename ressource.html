@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260817-4">
+  <link rel="stylesheet" href="style.css?v=20260817-5">
 </head>
 <body>
   <header class="site-header">
@@ -102,8 +102,8 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20260817-4"></script>
-  <script src="primary-data.js?v=20260817-4"></script>
+  <script src="script.js?v=20260817-5"></script>
+  <script src="primary-data.js?v=20260817-5"></script>
   <script>
     const params = new URLSearchParams(window.location.search);
     const level = window.ISMART_PRIMARY_DATA[params.get("niveau")] ? params.get("niveau") : "1AP";
@@ -147,7 +147,7 @@
       const levelName = window.ISMART_LEVEL_NAMES[level][isAr ? 1 : 0];
 
       document.title = `${typeName} - ${subjectName} - ${level} | iSmart Campus`;
-      document.getElementById("resourceClassLink").textContent = level;
+      document.getElementById("resourceClassLink").textContent = levelName;
       document.getElementById("resourceClassLink").href = `classe.html?niveau=${encodeURIComponent(level)}`;
       document.getElementById("resourceSubjectLink").textContent = subjectName;
       document.getElementById("resourceSubjectLink").href = `matiere.html?niveau=${encodeURIComponent(level)}&matiere=${encodeURIComponent(subject[0])}`;
@@ -155,12 +155,12 @@
       document.getElementById("resourceEyebrow").textContent = levelName;
       document.getElementById("resourceTitle").textContent = `${typeName} · ${subjectName}`;
       document.getElementById("resourceLead").textContent = isAr
-        ? `المستوى: ${level} · المادة: ${subjectName}`
-        : `Niveau : ${level} · Matière : ${subjectName}`;
+        ? `المستوى: ${levelName} · المادة: ${subjectName}`
+        : `Niveau : ${levelName} · Matière : ${subjectName}`;
       document.getElementById("lessonBadge").textContent = typeMap[typeKey][2];
       document.getElementById("lessonHeading").textContent = `${typeName} — ${subjectName}`;
       document.getElementById("lessonText").textContent = isAr
-        ? "هاد المحتوى نموذج أصلي داخل iSmart Campus باش المسار كامل يبقى خدام حتى نضيفو المحتوى الدراسي النهائي."
+        ? "هاد المحتوى نموذج أصلي داخل آي سمارت كامبوس باش المسار كامل يبقى خدام حتى نضيفو المحتوى الدراسي النهائي."
         : "Ce contenu est un modèle original iSmart Campus afin que tout le parcours reste fonctionnel avant l’intégration du contenu pédagogique final.";
       document.getElementById("objectiveText").textContent = isAr
         ? "الهدف هو نوفر للتلميذ صفحة واضحة، سهلة ومناسبة للمستوى ديالو."

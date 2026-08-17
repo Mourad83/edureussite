@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260817-4">
+  <link rel="stylesheet" href="style.css?v=20260817-5">
 </head>
 <body>
   <header class="site-header">
@@ -98,8 +98,8 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20260817-4"></script>
-  <script src="primary-data.js?v=20260817-4"></script>
+  <script src="script.js?v=20260817-5"></script>
+  <script src="primary-data.js?v=20260817-5"></script>
   <script>
     const primarySubjects = window.ISMART_PRIMARY_DATA;
     const names = window.ISMART_LEVEL_NAMES;
@@ -110,7 +110,10 @@
 
     function renderClassPage(){
       const isAr = document.documentElement.lang === "ar";
-      document.getElementById("classTitle").textContent = names[level][isAr ? 1 : 0];
+      const levelName = names[level][isAr ? 1 : 0];
+
+      document.getElementById("breadcrumbLevel").textContent = levelName;
+      document.getElementById("classTitle").textContent = levelName;
       document.getElementById("classIntro").textContent = isAr
         ? "اختار المادة باش توصل للدروس والتمارين والتصحيحات والفروض."
         : "Choisissez une matière pour accéder aux cours, exercices, corrigés et évaluations.";

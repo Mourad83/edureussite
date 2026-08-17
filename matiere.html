@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260817-4">
+  <link rel="stylesheet" href="style.css?v=20260817-5">
 </head>
 <body>
   <header class="site-header">
@@ -87,8 +87,8 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20260817-4"></script>
-  <script src="primary-data.js?v=20260817-4"></script>
+  <script src="script.js?v=20260817-5"></script>
+  <script src="primary-data.js?v=20260817-5"></script>
   <script>
     const params = new URLSearchParams(window.location.search);
     const level = window.ISMART_PRIMARY_DATA[params.get("niveau")] ? params.get("niveau") : "1AP";
@@ -105,17 +105,18 @@
       const isAr = document.documentElement.lang === "ar";
       const subjectName = isAr ? subject[2] : subject[1];
       const levelName = window.ISMART_LEVEL_NAMES[level][isAr ? 1 : 0];
+
       document.title = subjectName + " - " + level + " | iSmart Campus";
-      document.getElementById("classBreadcrumb").textContent = level;
+      document.getElementById("classBreadcrumb").textContent = levelName;
       document.getElementById("classBreadcrumb").href = `classe.html?niveau=${encodeURIComponent(level)}`;
       document.getElementById("subjectBreadcrumb").textContent = subjectName;
       document.getElementById("levelEyebrow").textContent = levelName;
       document.getElementById("subjectTitle").textContent = subjectName;
       document.getElementById("subjectIntro").textContent = isAr
-        ? `الموارد التعليمية ديال ${subjectName} للمستوى ${level}.`
-        : `Ressources de ${subjectName} pour le niveau ${level}.`;
+        ? `الموارد التعليمية ديال ${subjectName} للمستوى ${levelName}.`
+        : `Ressources de ${subjectName} pour le niveau ${levelName}.`;
       document.getElementById("backClass").href = `classe.html?niveau=${encodeURIComponent(level)}`;
-      document.getElementById("summaryTitle").textContent = subjectName + " · " + level;
+      document.getElementById("summaryTitle").textContent = `${subjectName} · ${levelName}`;
       document.getElementById("summaryText").textContent = isAr
         ? "تقدر تدخل مباشرة للدروس، التمارين، التصحيحات والفروض. جميع الروابط خدامين."
         : "Tu peux accéder directement aux cours, exercices, corrigés et évaluations. Tous les liens de cette page sont fonctionnels.";
