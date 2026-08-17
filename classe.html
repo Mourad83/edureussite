@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260817-3">
+  <link rel="stylesheet" href="style.css?v=20260817-4">
 </head>
 <body>
   <header class="site-header">
@@ -78,8 +78,8 @@
           <div class="content-type-card"><strong data-fr="Évaluations" data-ar="الفروض">Évaluations</strong><span data-fr="Contrôles et préparation" data-ar="الفروض والاستعداد">Contrôles et préparation</span></div>
         </div>
 
-        <div class="coming-note" data-fr="La structure est maintenant fonctionnelle. Les chapitres et les vrais documents seront ajoutés progressivement dans l'étape suivante." data-ar="البنية دابا خدامة. غادي نزيدو الدروس والوثائق الحقيقية تدريجيا فالمرحلة الجاية.">
-          La structure est maintenant fonctionnelle. Les chapitres et les vrais documents seront ajoutés progressivement dans l'étape suivante.
+        <div class="coming-note" data-fr="Chaque matière ouvre maintenant une vraie page avec cours, exercices, corrigés et évaluations." data-ar="كل مادة كتفتح دابا صفحة حقيقية فيها الدروس والتمارين والتصحيحات والفروض.">
+          Chaque matière ouvre maintenant une vraie page avec cours, exercices, corrigés et évaluations.
         </div>
       </div>
     </section>
@@ -98,71 +98,11 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20260817-3"></script>
+  <script src="script.js?v=20260817-4"></script>
+  <script src="primary-data.js?v=20260817-4"></script>
   <script>
-    const primarySubjects = {
-      "1AP": [
-        ["AR","Arabe","اللغة العربية"],
-        ["FR","Français","اللغة الفرنسية"],
-        ["M","Mathématiques","الرياضيات"],
-        ["SC","Activité scientifique","النشاط العلمي"],
-        ["EI","Éducation islamique","التربية الإسلامية"],
-        ["AE","Éducation artistique","التربية الفنية"]
-      ],
-      "2AP": [
-        ["AR","Arabe","اللغة العربية"],
-        ["FR","Français","اللغة الفرنسية"],
-        ["M","Mathématiques","الرياضيات"],
-        ["SC","Activité scientifique","النشاط العلمي"],
-        ["EI","Éducation islamique","التربية الإسلامية"],
-        ["AE","Éducation artistique","التربية الفنية"]
-      ],
-      "3AP": [
-        ["AR","Arabe","اللغة العربية"],
-        ["FR","Français","اللغة الفرنسية"],
-        ["M","Mathématiques","الرياضيات"],
-        ["SC","Activité scientifique","النشاط العلمي"],
-        ["EI","Éducation islamique","التربية الإسلامية"],
-        ["AE","Éducation artistique","التربية الفنية"]
-      ],
-      "4AP": [
-        ["AR","Arabe","اللغة العربية"],
-        ["FR","Français","اللغة الفرنسية"],
-        ["M","Mathématiques","الرياضيات"],
-        ["SC","Activité scientifique","النشاط العلمي"],
-        ["SS","Études sociales","الاجتماعيات"],
-        ["EI","Éducation islamique","التربية الإسلامية"],
-        ["AE","Éducation artistique","التربية الفنية"]
-      ],
-      "5AP": [
-        ["AR","Arabe","اللغة العربية"],
-        ["FR","Français","اللغة الفرنسية"],
-        ["M","Mathématiques","الرياضيات"],
-        ["SC","Activité scientifique","النشاط العلمي"],
-        ["SS","Études sociales","الاجتماعيات"],
-        ["EI","Éducation islamique","التربية الإسلامية"],
-        ["AE","Éducation artistique","التربية الفنية"]
-      ],
-      "6AP": [
-        ["AR","Arabe","اللغة العربية"],
-        ["FR","Français","اللغة الفرنسية"],
-        ["M","Mathématiques","الرياضيات"],
-        ["SC","Activité scientifique","النشاط العلمي"],
-        ["SS","Études sociales","الاجتماعيات"],
-        ["EI","Éducation islamique","التربية الإسلامية"],
-        ["AE","Éducation artistique","التربية الفنية"]
-      ]
-    };
-
-    const names = {
-      "1AP": ["1re année primaire","السنة الأولى ابتدائي"],
-      "2AP": ["2e année primaire","السنة الثانية ابتدائي"],
-      "3AP": ["3e année primaire","السنة الثالثة ابتدائي"],
-      "4AP": ["4e année primaire","السنة الرابعة ابتدائي"],
-      "5AP": ["5e année primaire","السنة الخامسة ابتدائي"],
-      "6AP": ["6e année primaire","السنة السادسة ابتدائي"]
-    };
-
+    const primarySubjects = window.ISMART_PRIMARY_DATA;
+    const names = window.ISMART_LEVEL_NAMES;
     const params = new URLSearchParams(window.location.search);
     const level = primarySubjects[params.get("niveau")] ? params.get("niveau") : "1AP";
     document.title = level + " | iSmart Campus";
@@ -174,15 +114,20 @@
       document.getElementById("classIntro").textContent = isAr
         ? "اختار المادة باش توصل للدروس والتمارين والتصحيحات والفروض."
         : "Choisissez une matière pour accéder aux cours, exercices, corrigés et évaluations.";
-      document.getElementById("subjectsGrid").innerHTML = primarySubjects[level].map(s => `
-        <a class="subject-page-card" href="#" onclick="event.preventDefault(); alert('${isAr ? "غادي نضيفو محتوى هاد المادة فالمرحلة الجاية." : "Le contenu de cette matière sera ajouté à l’étape suivante."}')">
-          <span class="subject-page-icon">${s[0]}</span>
-          <span>
-            <strong>${isAr ? s[2] : s[1]}</strong>
-            <small>${level}</small>
-          </span>
-        </a>
-      `).join("");
+
+      document.getElementById("subjectsGrid").innerHTML = primarySubjects[level].map(s => {
+        const label = isAr ? s[2] : s[1];
+        const url = `matiere.html?niveau=${encodeURIComponent(level)}&matiere=${encodeURIComponent(s[0])}`;
+        return `
+          <a class="subject-page-card" href="${url}">
+            <span class="subject-page-icon">${s[0]}</span>
+            <span>
+              <strong>${label}</strong>
+              <small>${level}</small>
+            </span>
+          </a>
+        `;
+      }).join("");
     }
 
     renderClassPage();

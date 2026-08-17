@@ -188,3 +188,18 @@ try{
     setTimeout(()=>localStorage.setItem("ismart-language",currentLang),0);
   });
 }catch(e){}
+
+
+try{
+  const preferredLanguage=localStorage.getItem("ismart-language");
+  if(preferredLanguage==="fr" || preferredLanguage==="ar"){
+    setLanguage(preferredLanguage);
+  }
+  langSwitch?.addEventListener("click",()=>{
+    setTimeout(()=>{
+      if(typeof currentLang!=="undefined"){
+        localStorage.setItem("ismart-language",currentLang);
+      }
+    },10);
+  });
+}catch(e){}
