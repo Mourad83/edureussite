@@ -1,6 +1,9 @@
-# iSmart Campus - V4.5
+# iSmart Campus V4.6
 
-Règle ajoutée :
-- lorsque la matière est Français, les titres des cours et ressources restent en français même si l'interface est en arabe ;
-- l'interface, les boutons, les niveaux, les descriptions et la navigation restent traduits en arabe ;
-- aucune autre logique du site n'est modifiée.
+Correction :
+- les contenus pédagogiques appartenant à la matière Français restent en français lorsque l'interface est en arabe ;
+- titre du cours en français ;
+- description du cours en français ;
+- nom de la matière affiché en français sur la carte ;
+- navigation générale du site reste en arabe ;
+- les autres matières continuent à être traduites normalement.

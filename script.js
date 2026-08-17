@@ -170,10 +170,18 @@ resourceGrid.addEventListener("click", (event) => {
 const langSwitch = document.getElementById("langSwitch");
 let currentLang = "fr";
 
+function preserveFrenchSubjectContent() {
+  document.querySelectorAll('[data-subject="Français"] [data-fr]').forEach((el) => {
+    el.dataset.ar = el.dataset.fr;
+  });
+}
+
 function applyLanguage(lang) {
   currentLang = lang === "ar" ? "ar" : "fr";
   document.documentElement.lang = currentLang;
   document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+  preserveFrenchSubjectContent();
+
   document.querySelectorAll("[data-fr][data-ar]").forEach((el) => {
     el.textContent = currentLang === "ar" ? el.dataset.ar : el.dataset.fr;
   });
