@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plateforme éducative gratuite : cours, exercices, corrigés et examens du primaire au baccalauréat.">
+  <title>EduRéussite - Apprendre, s'entraîner, réussir</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="#accueil" aria-label="Accueil EduRéussite">
+        <span class="logo-mark">E</span>
+        <span>EduRéussite</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#accueil">Accueil</a>
+        <a href="#niveaux">Niveaux</a>
+        <a href="#matieres">Matières</a>
+        <a href="#ressources">Ressources</a>
+        <a href="#apropos">À propos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">Plateforme éducative gratuite</span>
+          <h1>Tout pour apprendre, s'entraîner et réussir.</h1>
+          <p>
+            Retrouvez des cours, exercices, corrigés et examens pour tous les niveaux,
+            du primaire au baccalauréat.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#niveaux">Explorer les niveaux</a>
+            <a class="btn btn-secondary" href="#ressources">Voir les ressources</a>
+          </div>
+
+          <div class="search-box">
+            <label for="globalSearch">Que voulez-vous apprendre ?</label>
+            <div class="search-row">
+              <input id="globalSearch" type="search" placeholder="Ex. fractions, grammaire, physique...">
+              <button id="searchButton" type="button">Rechercher</button>
+            </div>
+            <p class="search-message" id="searchMessage" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="hero-card hero-card-main">
+            <span class="card-kicker">Votre parcours</span>
+            <h2>Choisissez votre niveau</h2>
+            <p>Accédez rapidement aux matières et aux ressources adaptées.</p>
+            <div class="mini-levels">
+              <a href="#primaire">Primaire</a>
+              <a href="#college">Collège</a>
+              <a href="#lycee">Lycée</a>
+              <a href="#bac">Baccalauréat</a>
+            </div>
+          </div>
+          <div class="floating-card floating-one">
+            <strong>100%</strong>
+            <span>Gratuit</span>
+          </div>
+          <div class="floating-card floating-two">
+            <strong>4</strong>
+            <span>Types de ressources</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="niveaux">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Par niveau</span>
+          <h2>Choisissez votre parcours</h2>
+          <p>Chaque niveau regroupe les matières, les cours et les exercices correspondants.</p>
+        </div>
+
+        <div class="level-grid">
+          <article class="level-card" id="primaire">
+            <div class="level-icon">P</div>
+            <span class="level-tag">Fondamentaux</span>
+            <h3>Primaire</h3>
+            <p>Lecture, français, mathématiques, sciences et apprentissages essentiels.</p>
+            <button class="link-button resource-filter" data-level="Primaire">Voir les ressources</button>
+          </article>
+
+          <article class="level-card" id="college">
+            <div class="level-icon">C</div>
+            <span class="level-tag">Consolidation</span>
+            <h3>Collège</h3>
+            <p>Des cours structurés et des exercices progressifs pour consolider les acquis.</p>
+            <button class="link-button resource-filter" data-level="Collège">Voir les ressources</button>
+          </article>
+
+          <article class="level-card" id="lycee">
+            <div class="level-icon">L</div>
+            <span class="level-tag">Approfondissement</span>
+            <h3>Lycée</h3>
+            <p>Des contenus adaptés aux différentes filières et aux objectifs du lycée.</p>
+            <button class="link-button resource-filter" data-level="Lycée">Voir les ressources</button>
+          </article>
+
+          <article class="level-card" id="bac">
+            <div class="level-icon">B</div>
+            <span class="level-tag">Préparation examen</span>
+            <h3>Baccalauréat</h3>
+            <p>Révisions, examens, corrigés et entraînement ciblé pour préparer le Bac.</p>
+            <button class="link-button resource-filter" data-level="Baccalauréat">Voir les ressources</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="matieres">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Par matière</span>
+          <h2>Les matières principales</h2>
+          <p>Une navigation simple pour trouver rapidement le contenu dont vous avez besoin.</p>
+        </div>
+
+        <div class="subject-grid">
+          <button class="subject-card subject-filter" data-subject="Français">
+            <span class="subject-icon">FR</span>
+            <span>
+              <strong>Français</strong>
+              <small>Grammaire, conjugaison, lecture, rédaction</small>
+            </span>
+          </button>
+
+          <button class="subject-card subject-filter" data-subject="Mathématiques">
+            <span class="subject-icon">M</span>
+            <span>
+              <strong>Mathématiques</strong>
+              <small>Calcul, algèbre, géométrie, analyse</small>
+            </span>
+          </button>
+
+          <button class="subject-card subject-filter" data-subject="Sciences">
+            <span class="subject-icon">S</span>
+            <span>
+              <strong>Sciences</strong>
+              <small>SVT, découverte, expérimentation</small>
+            </span>
+          </button>
+
+          <button class="subject-card subject-filter" data-subject="Physique">
+            <span class="subject-icon">PH</span>
+            <span>
+              <strong>Physique</strong>
+              <small>Mécanique, électricité, énergie</small>
+            </span>
+          </button>
+
+          <button class="subject-card subject-filter" data-subject="Anglais">
+            <span class="subject-icon">EN</span>
+            <span>
+              <strong>Anglais</strong>
+              <small>Vocabulaire, grammaire, compréhension</small>
+            </span>
+          </button>
+
+          <button class="subject-card subject-filter" data-subject="Histoire-Géographie">
+            <span class="subject-icon">HG</span>
+            <span>
+              <strong>Histoire-Géographie</strong>
+              <small>Repères, cartes, événements et méthodes</small>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ressources">
+      <div class="container">
+        <div class="section-heading resource-heading">
+          <div>
+            <span class="eyebrow">Bibliothèque</span>
+            <h2>Dernières ressources</h2>
+            <p id="resourceSubtitle">Cours, exercices, corrigés et examens disponibles dans la plateforme.</p>
+          </div>
+          <button class="btn btn-small btn-secondary" id="resetFilters">Tout afficher</button>
+        </div>
+
+        <div class="filter-row">
+          <button class="filter-chip active" data-type="Tous">Tous</button>
+          <button class="filter-chip" data-type="Cours">Cours</button>
+          <button class="filter-chip" data-type="Exercice">Exercices</button>
+          <button class="filter-chip" data-type="Corrigé">Corrigés</button>
+          <button class="filter-chip" data-type="Examen">Examens</button>
+        </div>
+
+        <div class="resource-grid" id="resourceGrid">
+          <article class="resource-card" data-title="Les fractions" data-level="Primaire" data-subject="Mathématiques" data-type="Cours">
+            <div class="resource-top">
+              <span class="resource-type">Cours</span>
+              <span class="resource-level">Primaire</span>
+            </div>
+            <h3>Les fractions</h3>
+            <p>Comprendre une fraction, la représenter et comparer des fractions simples.</p>
+            <div class="resource-meta">
+              <span>Mathématiques</span>
+              <a href="#" aria-label="Ouvrir le cours Les fractions">Ouvrir</a>
+            </div>
+          </article>
+
+          <article class="resource-card" data-title="Le présent de l'indicatif" data-level="Collège" data-subject="Français" data-type="Exercice">
+            <div class="resource-top">
+              <span class="resource-type">Exercice</span>
+              <span class="resource-level">Collège</span>
+            </div>
+            <h3>Le présent de l'indicatif</h3>
+            <p>Série d'exercices de conjugaison avec difficulté progressive.</p>
+            <div class="resource-meta">
+              <span>Français</span>
+              <a href="#" aria-label="Ouvrir l'exercice Le présent de l'indicatif">Ouvrir</a>
+            </div>
+          </article>
+
+          <article class="resource-card" data-title="Équations du second degré" data-level="Lycée" data-subject="Mathématiques" data-type="Corrigé">
+            <div class="resource-top">
+              <span class="resource-type">Corrigé</span>
+              <span class="resource-level">Lycée</span>
+            </div>
+            <h3>Équations du second degré</h3>
+            <p>Correction détaillée d'exercices sur le discriminant et les solutions.</p>
+            <div class="resource-meta">
+              <span>Mathématiques</span>
+              <a href="#" aria-label="Ouvrir le corrigé Équations du second degré">Ouvrir</a>
+            </div>
+          </article>
+
+          <article class="resource-card" data-title="Mécanique - examen blanc" data-level="Baccalauréat" data-subject="Physique" data-type="Examen">
+            <div class="resource-top">
+              <span class="resource-type">Examen</span>
+              <span class="resource-level">Baccalauréat</span>
+            </div>
+            <h3>Mécanique - examen blanc</h3>
+            <p>Un sujet complet pour s'entraîner dans les conditions du baccalauréat.</p>
+            <div class="resource-meta">
+              <span>Physique</span>
+              <a href="#" aria-label="Ouvrir l'examen blanc de mécanique">Ouvrir</a>
+            </div>
+          </article>
+
+          <article class="resource-card" data-title="Compréhension écrite" data-level="Collège" data-subject="Anglais" data-type="Cours">
+            <div class="resource-top">
+              <span class="resource-type">Cours</span>
+              <span class="resource-level">Collège</span>
+            </div>
+            <h3>Compréhension écrite</h3>
+            <p>Méthode simple pour repérer les informations clés dans un texte en anglais.</p>
+            <div class="resource-meta">
+              <span>Anglais</span>
+              <a href="#" aria-label="Ouvrir le cours Compréhension écrite">Ouvrir</a>
+            </div>
+          </article>
+
+          <article class="resource-card" data-title="La Révolution française" data-level="Lycée" data-subject="Histoire-Géographie" data-type="Cours">
+            <div class="resource-top">
+              <span class="resource-type">Cours</span>
+              <span class="resource-level">Lycée</span>
+            </div>
+            <h3>La Révolution française</h3>
+            <p>Dates, notions et événements essentiels à retenir.</p>
+            <div class="resource-meta">
+              <span>Histoire-Géographie</span>
+              <a href="#" aria-label="Ouvrir le cours La Révolution française">Ouvrir</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="empty-state" id="emptyState">
+          <strong>Aucun résultat</strong>
+          <p>Essayez un autre mot-clé ou réinitialisez les filtres.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="apropos">
+      <div class="container">
+        <div class="about-card">
+          <div>
+            <span class="eyebrow">Notre objectif</span>
+            <h2>Rendre les ressources scolaires simples et accessibles.</h2>
+          </div>
+          <p>
+            EduRéussite centralise les supports pédagogiques pour aider les élèves à apprendre
+            à leur rythme et permettre aux familles de retrouver facilement des ressources fiables.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-card">
+          <div>
+            <span class="eyebrow eyebrow-light">Commencer maintenant</span>
+            <h2>Choisissez votre niveau et commencez à apprendre.</h2>
+          </div>
+          <a class="btn btn-white" href="#niveaux">Voir les niveaux</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <a class="logo footer-logo" href="#accueil">
+        <span class="logo-mark">E</span>
+        <span>EduRéussite</span>
+      </a>
+      <p>© <span id="currentYear"></span> EduRéussite. Plateforme éducative.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
