@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260817-5">
+  <link rel="stylesheet" href="style.css?v=20260817-6">
 </head>
 <body>
   <header class="site-header">
@@ -87,8 +87,8 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20260817-5"></script>
-  <script src="primary-data.js?v=20260817-5"></script>
+  <script src="script.js?v=20260817-6"></script>
+  <script src="primary-data.js?v=20260817-6"></script>
   <script>
     const params = new URLSearchParams(window.location.search);
     const level = window.ISMART_PRIMARY_DATA[params.get("niveau")] ? params.get("niveau") : "1AP";
@@ -134,7 +134,7 @@
     }
 
     renderSubjectPage();
-    document.getElementById("langSwitch").addEventListener("click",()=>setTimeout(renderSubjectPage,0));
+    window.addEventListener("ismart-language-changed", renderSubjectPage);
   </script>
 </body>
 </html>

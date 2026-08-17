@@ -1381,3 +1381,10 @@ html[dir="rtl"] .exercise-list{
     grid-template-columns:1fr;
   }
 }
+
+html[dir="rtl"] body{direction:rtl;text-align:right}
+html[dir="rtl"] .nav-wrap,html[dir="rtl"] .main-nav,html[dir="rtl"] .hero-grid,html[dir="rtl"] .section-heading,html[dir="rtl"] .resource-heading,html[dir="rtl"] .about-card,html[dir="rtl"] .cta-card,html[dir="rtl"] .footer-wrap,html[dir="rtl"] .breadcrumbs,html[dir="rtl"] .resource-layout,html[dir="rtl"] .subject-summary,html[dir="rtl"] .resource-meta,html[dir="rtl"] .resource-top{direction:rtl}
+html[dir="rtl"] .main-nav{margin-left:0!important;margin-right:auto!important}
+html[dir="rtl"] .resource-arrow{margin-left:0!important;margin-right:auto!important}
+html[dir="rtl"] input{text-align:right}
+html[dir="ltr"] body{direction:ltr;text-align:left}

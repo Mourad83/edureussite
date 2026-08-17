@@ -159,47 +159,37 @@ resourceGrid.addEventListener("click", (event) => {
   }
 });
 
-const langSwitch=document.getElementById("langSwitch");
-let currentLang="fr";
+const langSwitch = document.getElementById("langSwitch");
+let currentLang = "fr";
 
-function setLanguage(lang){
-  currentLang=lang;
-  document.documentElement.lang=lang;
-  document.documentElement.dir=lang==="ar"?"rtl":"ltr";
-  document.querySelectorAll("[data-fr][data-ar]").forEach(el=>{
-    el.textContent=el.dataset[lang];
+function applyLanguage(lang) {
+  currentLang = lang === "ar" ? "ar" : "fr";
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+  document.querySelectorAll("[data-fr][data-ar]").forEach((el) => {
+    el.textContent = currentLang === "ar" ? el.dataset.ar : el.dataset.fr;
   });
-  document.querySelectorAll("[data-placeholder-fr][data-placeholder-ar]").forEach(el=>{
-    el.placeholder=lang==="ar"?el.dataset.placeholderAr:el.dataset.placeholderFr;
+  document.querySelectorAll("[data-placeholder-fr][data-placeholder-ar]").forEach((el) => {
+    el.placeholder = currentLang === "ar" ? el.dataset.placeholderAr : el.dataset.placeholderFr;
   });
-  document.querySelector(".lang-fr")?.classList.toggle("active",lang==="fr");
-  document.querySelector(".lang-ar")?.classList.toggle("active",lang==="ar");
+  document.querySelector(".lang-fr")?.classList.toggle("active", currentLang === "fr");
+  document.querySelector(".lang-ar")?.classList.toggle("active", currentLang === "ar");
+  try { localStorage.setItem("ismart-language", currentLang); } catch (e) {}
 }
 
-langSwitch?.addEventListener("click",()=>setLanguage(currentLang==="fr"?"ar":"fr"));
-setLanguage("fr");
+function initializeLanguage() {
+  let saved = "fr";
+  try {
+    const stored = localStorage.getItem("ismart-language");
+    if (stored === "fr" || stored === "ar") saved = stored;
+  } catch (e) {}
+  applyLanguage(saved);
+}
 
-try{
-  const savedLanguage=localStorage.getItem("ismart-language");
-  if(savedLanguage==="ar" || savedLanguage==="fr"){
-    setLanguage(savedLanguage);
-  }
-  langSwitch?.addEventListener("click",()=>{
-    setTimeout(()=>localStorage.setItem("ismart-language",currentLang),0);
+if (langSwitch) {
+  langSwitch.addEventListener("click", () => {
+    applyLanguage(currentLang === "fr" ? "ar" : "fr");
+    window.dispatchEvent(new CustomEvent("ismart-language-changed", { detail: { lang: currentLang } }));
   });
-}catch(e){}
-
-
-try{
-  const preferredLanguage=localStorage.getItem("ismart-language");
-  if(preferredLanguage==="fr" || preferredLanguage==="ar"){
-    setLanguage(preferredLanguage);
-  }
-  langSwitch?.addEventListener("click",()=>{
-    setTimeout(()=>{
-      if(typeof currentLang!=="undefined"){
-        localStorage.setItem("ismart-language",currentLang);
-      }
-    },10);
-  });
-}catch(e){}
+}
+initializeLanguage();
